@@ -15,7 +15,6 @@ public abstract class Technik {
     private String name;
     private double mietPreiproStunde;
     private String beschreibung;
-    private int Anzahl;
 
     public Technik(String name, double mietPreiproStunde, String beschreibung) {
         this.name = name;
