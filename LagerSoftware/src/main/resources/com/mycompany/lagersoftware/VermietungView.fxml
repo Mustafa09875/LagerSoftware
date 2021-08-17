@@ -4,12 +4,14 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="421.0" prefWidth="618.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.VermietungViewController">
+<AnchorPane id="AnchorPane" prefHeight="421.0" prefWidth="618.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.VermietungViewController">
     <stylesheets>
         <URL value="@vermietungview.css" />
     </stylesheets>
@@ -82,5 +84,11 @@
             </Button>
          </children>
       </HBox>
+      <ListView fx:id="lwSelectKunde" layoutX="14.0" layoutY="81.0" onMouseClicked="#btnSelectKunde" prefHeight="200.0" prefWidth="165.0" />
+      <ListView fx:id="lwSelectTechniker" layoutX="225.0" layoutY="81.0" onMouseClicked="#btnSelectTechniker" prefHeight="200.0" prefWidth="166.0" />
+      <ListView fx:id="lwSelectTechnik" layoutX="437.0" layoutY="81.0" onMouseClicked="#btnSelectTechnik" prefHeight="200.0" prefWidth="166.0" />
+      <Label layoutX="14.0" layoutY="64.0" text="Kunden:" />
+      <Label layoutX="225.0" layoutY="64.0" text="Techniker:" />
+      <Label layoutX="437.0" layoutY="64.0" text="Technik" />
    </children>
 </AnchorPane>

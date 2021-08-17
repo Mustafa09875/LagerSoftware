@@ -7,7 +7,12 @@ package com.mycompany.lagersoftware;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 
 /**
  * FXML Controller class
@@ -16,6 +21,15 @@ import javafx.fxml.Initializable;
  */
 public class VermietungViewController implements Initializable {
 
+    @FXML
+    private HBox LagerVerwaltungHbox;
+    @FXML
+    private ListView<?> lwSelectKunde;
+    @FXML
+    private ListView<?> lwSelectTechniker;
+    @FXML
+    private ListView<?> lwSelectTechnik;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +37,29 @@ public class VermietungViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void BtnTechnikanlegen(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnTechnikAnpassen(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnTechnikRegale(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnSelectKunde(MouseEvent event) {
+    }
+
+    @FXML
+    private void btnSelectTechniker(MouseEvent event) {
+    }
+
+    @FXML
+    private void btnSelectTechnik(MouseEvent event) {
+    }
     
 }
