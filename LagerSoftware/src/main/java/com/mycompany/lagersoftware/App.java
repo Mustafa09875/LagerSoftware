@@ -126,7 +126,7 @@ public class App extends Application {
         vermietungen = new ArrayList<Vermietung>();
         
         
-        Vermietung v = new Vermietung(new ArrayList<Techniker> techniker,pk,);
+        Vermietung v = new Vermietung(new ArrayList<Techniker> techniker,pk, ,"12.12.2001","12.02.2021",13,4);
         
         launch();
     }
