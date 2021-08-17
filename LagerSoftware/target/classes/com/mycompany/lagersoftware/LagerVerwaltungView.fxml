@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="AnchorPaneTechnikAnpassen" prefHeight="475.0" prefWidth="618.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.LagerVerwaltungViewController">
+<AnchorPane id="AnchorPane" fx:id="AnchorPaneTechnikAnpassen" prefHeight="475.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.LagerVerwaltungViewController">
     <stylesheets>
         <URL value="@lagerverwaltungview.css" />
     </stylesheets>
@@ -90,10 +90,14 @@
       </HBox>
       <AnchorPane fx:id="BtnTechnikAnpassen" layoutX="-1.0" layoutY="53.0" prefHeight="421.0" prefWidth="617.0">
          <children>
+<<<<<<< Updated upstream
             <ListView fx:id="LWTechnikAnpassen" layoutX="2.0" onMouseClicked="#clickSelect" prefHeight="421.0" prefWidth="618.0" />
+=======
+            <ListView fx:id="LWTechnikAnpassen" layoutX="2.0" prefHeight="425.0" prefWidth="618.0" />
+>>>>>>> Stashed changes
          </children>
       </AnchorPane>
-      <TabPane fx:id="TabPane" layoutX="7.0" layoutY="47.0" prefHeight="413.0" prefWidth="613.0" style="-fx-background-color: #E3E3E3;" stylesheets="@lagerverwaltungview.css" tabClosingPolicy="UNAVAILABLE" visible="false">
+      <TabPane fx:id="TabPane" layoutX="1.0" layoutY="53.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@lagerverwaltungview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab style="-fx-Cursor: Hand;" text="Box">
                <content>
