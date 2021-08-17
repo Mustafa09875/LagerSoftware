@@ -1,0 +1,50 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+}
+
+.button1
+{   
+    -fx-background-color : #D1D5F7;
+
+}
+
+.button1:hover
+{   
+    -fx-background-color : #CAD0FF;
+    -fx-font-size: 15px; 
+    -fx-cursor:hand ;
+
+}
+
+.button1:pressed
+{   
+    -fx-background-color : #D8DBEF ;
+
+}
+.button1:focused{
+  -fx-border-color: #FFFFFF;
+}
+
+.buttonmenu{
+    -fx-background-color: #E3E3E3;
+}
+
+.buttonmenu:hover{
+  -fx-background-color: #DEDFE8;
+    -fx-font-size: 15px; 
+  -fx-cursor:hand ;
+}
+.buttonmenu:pressed{
+  -fx-background-color: #D7DAF1;  
+}
+.buttonmenu:focused{
+  -fx-border-color: #FFFFFF;
+}
+
+.title:hover{
+        -fx-cursor:text ;
+}
+

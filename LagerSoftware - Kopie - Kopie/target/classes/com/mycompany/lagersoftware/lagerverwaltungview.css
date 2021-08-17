@@ -1,0 +1,87 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.buttonmenu{
+    -fx-background-color: #E3E3E3;
+}
+
+.buttonmenu:hover{
+  -fx-background-color: #DEDFE8;
+    -fx-font-size: 15px; 
+  -fx-cursor:hand ;
+}
+.buttonmenu:pressed{
+  -fx-background-color: #D7DAF1;  
+}
+.buttonmenu:focused{
+  -fx-border-color: #FFFFFF;
+}
+.buttonmenue:selected{
+    -fx-boder-color:  #FFFFFF;
+}
+.buttonmenue:selected .focus-indicator{
+    -fx-focus-color: #FFFFFF;
+
+}
+
+.text-input
+{
+-fx-text-fill : #515151;
+}
+
+.btn:hover{
+    -fx-cursor:hand ;
+}
+
+.tab{
+        -fx-background-color:  #D1D5F7 ;
+
+    -fx-pref-width : 99;
+    -fx-pref-height : 30;
+}
+.tab-header-background{
+    -fx-background-color: -fx-primary;
+}
+.tab:foused{
+
+    -fx-border-color:  #D1D5F7;
+}
+.tab:selected{
+        -fx-border-color: #FFFFFF;
+}
+.tab:selected .focus-indicator{
+    -fx-focus-color:  #D1D5F7;
+
+}
+.tab:hover{
+        -fx-cursor:hand ;
+    -fx-font-size: 14px; 
+
+}
+
+.btnsave{
+     -fx-background-color:  #D1D5F7;
+}
+.btnsave:hover{
+    -fx-background-color: #D9DBEE;
+        -fx-font-size: 15px; 
+}
+
+.btnsave:pressed{
+    -fx-background-color:  #E3E3E3;
+    -fx-border-color: #FFFFFF;
+    
+}
+
+
+.ListView{
+    -fx-background-color: black
+}
+.ListView:selected .focus-indicator{
+        -fx-focus-color: black;
+
+}
