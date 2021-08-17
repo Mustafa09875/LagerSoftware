@@ -1,3 +1,17 @@
+com\mycompany\lagersoftware\Traversen.class
+com\mycompany\lagersoftware\Buehnenplatte.class
+com\mycompany\lagersoftware\Kabel.class
+com\mycompany\lagersoftware\PrivateKundeModel.class
 com\mycompany\lagersoftware\MainViewController.class
+com\mycompany\lagersoftware\Technik.class
 module-info.class
+com\mycompany\lagersoftware\LagerVerwaltungViewController.class
+com\mycompany\lagersoftware\Pult.class
+com\mycompany\lagersoftware\GeschaeftsKundeModel.class
+com\mycompany\lagersoftware\Kunde.class
+com\mycompany\lagersoftware\Person.class
+com\mycompany\lagersoftware\Monitor.class
+com\mycompany\lagersoftware\Vermietung.class
+com\mycompany\lagersoftware\Boxen.class
+com\mycompany\lagersoftware\Techniker.class
 com\mycompany\lagersoftware\App.class
