@@ -5,18 +5,22 @@
  */
 package com.mycompany.lagersoftware;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 /**
  * FXML Controller class
@@ -92,12 +96,18 @@ public class LagerVerwaltungViewController implements Initializable {
     
     private Technik technik;
     private static ArrayList<Technik> technikarraylist;
+    @FXML
+    private BorderPane BorderPaneTechnikSelect;
     /**
      * Initializes the controller class.
      */
     @Override
     
     public void initialize(URL url, ResourceBundle rb) {
+        TabPane.setVisible(false);
+        AnchorPaneTechnikAnpassen.setVisible(true);
+        BorderPaneTechnikSelect.setVisible(false);
+        
          technikarraylist = new ArrayList <Technik>();
          Boxen b = new Boxen("asd", 12, "AS", 12);
          getTechnik().add(b);
@@ -124,12 +134,14 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void BtnTechnikanlegen(ActionEvent event) {
         TabPane.setVisible(true);
+        
     }
 
     @FXML
     private void BtnTechnikAnpassen(ActionEvent event) {
         AnchorPaneTechnikAnpassen.setVisible(true);
         TabPane.setVisible(false);
+      
     }
 
     @FXML
@@ -194,6 +206,7 @@ public class LagerVerwaltungViewController implements Initializable {
     }
 
     @FXML
+<<<<<<< Updated upstream
     private void clickSelect(MouseEvent event) {
  
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
@@ -202,5 +215,14 @@ public class LagerVerwaltungViewController implements Initializable {
         System.out.println(App.getSelectedTechnik().getName());
     }
         
+=======
+    private void clickSelect(MouseEvent event) throws IOException {
+        TabPane.setVisible(false);
+         AnchorPaneTechnikAnpassen.setVisible(false);
+        BorderPaneTechnikSelect.setVisible(true);
+    AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
+                BorderPaneTechnikSelect.setCenter(pane);
+       
+>>>>>>> Stashed changes
     }
 
