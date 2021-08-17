@@ -19,6 +19,15 @@ public class App extends Application {
     private static HashMap technikObjekte;
     private static ArrayList<Kunde> kunden;
     private static ArrayList<Techniker> techniker;
+    private static ArrayList<Vermietung> vermietungen;
+
+    public static ArrayList<Vermietung> getVermietungen() {
+        return vermietungen;
+    }
+
+    public static void setVermietungen(ArrayList<Vermietung> vermietungen) {
+        App.vermietungen = vermietungen;
+    }
 
     public static ArrayList<Techniker> getTechniker() {
         return techniker;
@@ -94,11 +103,17 @@ public class App extends Application {
         
         PrivateKundeModel pk = new PrivateKundeModel("Kudi","Budi","schmudi");
         GeschaeftsKundeModel gk = new GeschaeftsKundeModel("Ki","Bi","si","Gymhum");
+        PrivateKundeModel pk1 = new PrivateKundeModel("Pudel","Mudel","3D");
+        GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel("Wendy","sus","si","Gymhum");
+        GeschaeftsKundeModel gk2 = new GeschaeftsKundeModel("This","is","a","robbery");
         
         techniker = new ArrayList<Techniker>();
         
         Techniker t = new Techniker("Eren","Jaeger",100.00,"Freiheit");
+        Techniker t1 = new Techniker("Drunk","the Dank",100.00,"Wein");
+        Techniker t2 = new Techniker("Checki","Chan",100.00,"BruceLeee");
         
+        vermietungen = new ArrayList<Vermietung>();
         
         launch();
     }
