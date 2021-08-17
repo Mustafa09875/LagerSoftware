@@ -25,6 +25,22 @@ public class App extends Application {
     private static Techniker selectedTechniker;
     private static Technik selectedTechnik;
 
+    public static Kunde getSelectedKunde() {
+        return selectedKunde;
+    }
+
+    public static void setSelectedKunde(Kunde selectedKunde) {
+        App.selectedKunde = selectedKunde;
+    }
+
+    public static Techniker getSelectedTechniker() {
+        return selectedTechniker;
+    }
+
+    public static void setSelectedTechniker(Techniker selectedTechniker) {
+        App.selectedTechniker = selectedTechniker;
+    }
+
     public static Technik getSelectedTechnik() {
         return selectedTechnik;
     }
