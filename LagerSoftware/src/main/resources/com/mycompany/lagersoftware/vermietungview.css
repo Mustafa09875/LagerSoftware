@@ -19,9 +19,29 @@
     
 }
 
-.tab{
-        -fx-background-color:  #D1D5F7 ;
 
-    -fx-pref-width : 99;
-    -fx-pref-height : 30;
+.btn:hover{
+    -fx-cursor:hand ;
+}
+.buttonmenu{
+    -fx-background-color: #E3E3E3;
+}
+
+.buttonmenu:hover{
+  -fx-background-color: #DEDFE8;
+    -fx-font-size: 15px; 
+  -fx-cursor:hand ;
+}
+.buttonmenu:pressed{
+  -fx-background-color: #D7DAF1;  
+}
+.buttonmenu:focused{
+  -fx-border-color: #FFFFFF;
+}
+.buttonmenue:selected{
+    -fx-boder-color:  #FFFFFF;
+}
+.buttonmenue:selected .focus-indicator{
+    -fx-focus-color: #FFFFFF;
+
 }

@@ -26,10 +26,8 @@ public  class Vermietung {
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
 
-    public Vermietung(ArrayList<Techniker> techniker, Kunde kunde, HashMap<Technik, Integer> objekte, String start, String ende, int kosten, int stunden) {
-        this.techniker = techniker;
+    public Vermietung(Kunde kunde, String start, String ende, int kosten, int stunden) {
         this.kunde = kunde;
-        this.objekte = objekte;
         this.start = start;
         this.ende = ende;
         this.kosten = kosten;
@@ -67,8 +65,7 @@ public  class Vermietung {
 
    
     
-    
-    
+
 
     public Kunde getKunde() {
         return kunde;

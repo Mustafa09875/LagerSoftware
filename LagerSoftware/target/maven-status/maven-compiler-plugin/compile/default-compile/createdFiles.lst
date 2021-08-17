@@ -11,8 +11,6 @@ com\mycompany\lagersoftware\GeschaeftsKundeModel.class
 com\mycompany\lagersoftware\Kunde.class
 com\mycompany\lagersoftware\Person.class
 com\mycompany\lagersoftware\Monitor.class
-com\mycompany\lagersoftware\Vermietung.class
 com\mycompany\lagersoftware\Boxen.class
 com\mycompany\lagersoftware\Techniker.class
-com\mycompany\lagersoftware\App.class
 com\mycompany\lagersoftware\VermietungViewController.class
