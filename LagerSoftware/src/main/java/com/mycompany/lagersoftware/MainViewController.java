@@ -55,8 +55,8 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         BtnMraus.setVisible(false);
-      TitleBar.requestFocus();
-      TitleBar.setFocusTraversable(true);
+        TitleBar.requestFocus();
+        TitleBar.setFocusTraversable(true);
         //MenuePane wird nach links verschoben
         MenuePane.setTranslateX(-156);
         MenuePane.setVisible(false);
@@ -134,7 +134,7 @@ public class MainViewController implements Initializable {
 
     @FXML
     private void BtnMrein(ActionEvent event) {
-          MenuePane.setVisible(true);
+        MenuePane.setVisible(true);
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(MenuePane);
