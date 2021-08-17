@@ -11,8 +11,8 @@ package com.mycompany.lagersoftware;
  */
 public class Traversen extends Technik{
     private String art;
-    private String laenge;
-    public Traversen(String name, double mietPreiproStunde, String beschreibung, String art, String laenge) {
+    private double laenge;
+    public Traversen(String name, double mietPreiproStunde, String beschreibung, String art, double laenge) {
         super(name, mietPreiproStunde, beschreibung);
         this.art = art;
         this.laenge = laenge;
@@ -31,11 +31,11 @@ public class Traversen extends Technik{
         this.art = art;
     }
 
-    public String getLaenge() {
+    public double getLaenge() {
         return laenge;
     }
 
-    public void setLaenge(String laenge) {
+    public void setLaenge(double laenge) {
         this.laenge = laenge;
     }
     

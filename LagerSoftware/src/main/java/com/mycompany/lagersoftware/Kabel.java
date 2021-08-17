@@ -12,22 +12,17 @@ package com.mycompany.lagersoftware;
  * @author Test
  */
 public class Kabel extends Technik{
-    private String laenge;
-    public Kabel(String name, double mietPreiproStunde, String beschreibung) {
+    private double laenge;
+    public Kabel(String name, double mietPreiproStunde, String beschreibung, double laenge) {
         super(name, mietPreiproStunde, beschreibung);
+        this.laenge = laenge;
     }
 
     @Override
     public void datenAusgeben() {
     }
 
-    public String getLaenge() {
-        return laenge;
-    }
-
-    public void setLaenge(String laenge) {
-        this.laenge = laenge;
-    }
+   
     
     
     

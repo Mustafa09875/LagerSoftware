@@ -8,6 +8,7 @@ package com.mycompany.lagersoftware;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -18,22 +19,21 @@ public  class Vermietung {
     private Techniker techniker;
     private Kunde kunde;
     private Technik technik;
-    int technikzeug[][];
-    private ArrayList <Technik> technikzeugs;
+    private HashMap<Technik, Integer> objekte;
     private String start;
     private String ende;
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
-    public Vermietung(Kunde kunde, Technik technik, String start, String ende) {
+
+    public Vermietung(Techniker techniker, Kunde kunde, Technik technik, HashMap<Technik, Integer> objekte, String start, String ende) {
         this.techniker = techniker;
         this.kunde = kunde;
         this.technik = technik;
-        technikzeug = new int[4][40];
-        technikzeugs = new ArrayList <Technik>();
+        this.objekte = objekte;
         this.start = start;
         this.ende = ende;
-      
     }
+
 
     public String getStart() {
         return start;
@@ -50,17 +50,18 @@ public  class Vermietung {
     public void setEnde(String ende) {
         this.ende = ende;
     }
+
+    public HashMap<Technik, Integer> getObjekte() {
+        return objekte;
+    }
+
+    public void setObjekte(HashMap<Technik, Integer> objekte) {
+        this.objekte = objekte;
+    }
     
     
 
-    public ArrayList<Technik> getTechnikzeugs() {
-        return technikzeugs;
-    }
-
-    public void setTechnikzeugs(ArrayList<Technik> technikzeugs) {
-        this.technikzeugs = technikzeugs;
-    }
-    
+   
     
     
     public Techniker getTechniker() {

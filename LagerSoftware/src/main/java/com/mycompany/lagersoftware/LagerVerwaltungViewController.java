@@ -98,10 +98,7 @@ public class LagerVerwaltungViewController implements Initializable {
     
     public void initialize(URL url, ResourceBundle rb) {
          technikarraylist = new ArrayList <Technik>();
-       Boxen b  = new Boxen("JBL", 14, "runde Form", "20 KG");
-        Kabel k = new Kabel("EST", 5, "5M Laenge");
-        getTechnik().add(b);
-        getTechnik().add(k);
+       
         
         for(Technik t: getTechnik()){
             LWTechnikAnpassen.getItems().add(t.getName()+ " - "+t.getMietPreiproStunde()+ " - "+t.getBeschreibung()+ " - "+t.getClass().getSimpleName());
@@ -139,16 +136,23 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void BtnSaveBoxen(ActionEvent event) {
         double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
-        Boxen b1 = new Boxen(TxtFBoxenName.getText(), sPreis, TxtFBoxenBeschreibung.getText(), TxtFBoxenGewicht.getText());
+        double sGewicht = Double.parseDouble(TxtFBoxenGewicht.getText());
+        Boxen b1 = new Boxen(TxtFBoxenName.getText(), sPreis, TxtFBoxenBeschreibung.getText(), sGewicht);
         App.getTechnik().add(b1);
     }
 
     @FXML
     private void BtnSaveKabel(ActionEvent event) {
+        double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
+        double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
+        Kabel k1 = new Kabel (TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge);
     }
 
     @FXML
     private void BtnSaveTravers(ActionEvent event) {
+        double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
+        double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
+        Traversen t1 = new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(),TxtFTraversArt.getText(), sLaenge );
     }
 
     @FXML

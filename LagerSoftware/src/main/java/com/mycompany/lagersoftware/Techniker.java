@@ -12,10 +12,31 @@ package com.mycompany.lagersoftware;
  * @author Test
  */
 public class Techniker extends Person{
-    
-    public Techniker(String vorname, String nachname) {
-        super(vorname, nachname);
+    private double Stundensatz;
+    private String Beschreibung;
+
+    public double getStundensatz() {
+        return Stundensatz;
     }
+
+    public void setStundensatz(double Stundensatz) {
+        this.Stundensatz = Stundensatz;
+    }
+
+    public String getBeschreibung() {
+        return Beschreibung;
+    }
+
+    public void setBeschreibung(String Beschreibung) {
+        this.Beschreibung = Beschreibung;
+    }
+
+    public Techniker(String vorname, String nachname, double Stundensatz, String Beschreibung ) {
+        super(vorname, nachname);
+        this.Stundensatz = Stundensatz;
+        this.Beschreibung = Beschreibung;
+    }
+   
     
     
 }

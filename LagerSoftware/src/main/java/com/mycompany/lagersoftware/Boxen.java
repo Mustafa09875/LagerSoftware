@@ -12,9 +12,9 @@ package com.mycompany.lagersoftware;
  * @author Test
  */
 public class Boxen extends Technik{
-    private String gewicht;
+    private double gewicht;
 
-    public Boxen(String name, double mietPreiproStunde, String beschreibung, String gewicht) {
+    public Boxen(String name, double mietPreiproStunde, String beschreibung, double gewicht) {
         super(name, mietPreiproStunde, beschreibung);
     }
 
@@ -22,11 +22,11 @@ public class Boxen extends Technik{
     public void datenAusgeben() {
     }
 
-    public String getGewicht() {
+    public double getGewicht() {
         return gewicht;
     }
 
-    public void setGewicht(String gewicht) {
+    public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
     }
     
