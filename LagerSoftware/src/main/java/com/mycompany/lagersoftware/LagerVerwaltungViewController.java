@@ -98,7 +98,9 @@ public class LagerVerwaltungViewController implements Initializable {
     
     public void initialize(URL url, ResourceBundle rb) {
          technikarraylist = new ArrayList <Technik>();
-       
+         Boxen b = new Boxen("asd", 12, "AS", 12);
+         getTechnik().add(b);
+         getTechnik().add(b);
         
         for(Technik t: getTechnik()){
             LWTechnikAnpassen.getItems().add(t.getName()+ " - "+t.getMietPreiproStunde()+ " - "+t.getBeschreibung()+ " - "+t.getClass().getSimpleName());
@@ -157,14 +159,24 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSavePult(ActionEvent event) {
+        double sPreis = Double.parseDouble(TxtFPultMietpreis.getText());
+        double sKanal = Double.parseDouble(TxtFPultKanele.getText());
+        Pult p1 = new Pult(TxtFPultName.getText(), sPreis, TxtFPultBeschreibung.getText(), sKanal);
     }
 
     @FXML
     private void BtnSavePlatte(ActionEvent event) {
+        double sPreis = Double.parseDouble(TxtFPlatteMietpreis.getText());
+       
+    
+        Buehnenplatte pl1 = new Buehnenplatte(TxtFPlatteName.getText(), sPreis, TxtFPlatteBeschreibung.getText(), TxtFPlatteMasse.getText());
     }
 
     @FXML
     private void BtnSaveMonitor(ActionEvent event) {
+    double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
+    double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
+    Monitor m1 = new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll);
     }
     
 }

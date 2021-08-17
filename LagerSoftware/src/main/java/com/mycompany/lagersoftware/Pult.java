@@ -12,8 +12,8 @@ package com.mycompany.lagersoftware;
  * @author Test
  */
 public class Pult extends Technik{
-    private String kanaele;
-    public Pult(String name, double mietPreiproStunde, String beschreibung, String kanaele) {
+    private double kanaele;
+    public Pult(String name, double mietPreiproStunde, String beschreibung, double kanaele) {
         super(name, mietPreiproStunde, beschreibung);
     }
 
@@ -21,11 +21,11 @@ public class Pult extends Technik{
     public void datenAusgeben() {
     }
 
-    public String getKanaele() {
+    public double getKanaele() {
         return kanaele;
     }
 
-    public void setKanaele(String kanaele) {
+    public void setKanaele(double kanaele) {
         this.kanaele = kanaele;
     }
     

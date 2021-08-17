@@ -9,11 +9,11 @@ package com.mycompany.lagersoftware;
  *
  * @author Test
  */
-public class MonitorModel extends Technik{
-    private String zollangabe;
-    private String beschreibung;
-    public MonitorModel(String name, double mietPreiproStunde, String beschreibung) {
+public class Monitor extends Technik{
+    private double zollangabe;
+    public Monitor(String name, double mietPreiproStunde, String beschreibung, double zollangabe) {
         super(name, mietPreiproStunde, beschreibung);
+        this.zollangabe = zollangabe;
     }
 
     

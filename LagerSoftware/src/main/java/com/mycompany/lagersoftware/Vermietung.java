@@ -22,16 +22,20 @@ public  class Vermietung {
     private HashMap<Technik, Integer> objekte;
     private String start;
     private String ende;
+    private int kosten;
+    private int stunden;
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
 
-    public Vermietung(Techniker techniker, Kunde kunde, Technik technik, HashMap<Technik, Integer> objekte, String start, String ende) {
+    public Vermietung(Techniker techniker, Kunde kunde, Technik technik, HashMap<Technik, Integer> objekte, String start, String ende, int Stunden, int Kosten) {
         this.techniker = techniker;
         this.kunde = kunde;
         this.technik = technik;
         this.objekte = objekte;
         this.start = start;
         this.ende = ende;
+        this.stunden = stunden;
+        this.kosten = kosten;
     }
 
 

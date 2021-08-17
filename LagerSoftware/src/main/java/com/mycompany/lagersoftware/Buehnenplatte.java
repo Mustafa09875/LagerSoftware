@@ -14,8 +14,9 @@ package com.mycompany.lagersoftware;
 public class Buehnenplatte extends Technik{
     private String maBe;
 
-    public Buehnenplatte(String name, double mietPreiproStunde, String beschreibung) {
+    public Buehnenplatte(String name, double mietPreiproStunde, String beschreibung, String maBe) {
         super(name, mietPreiproStunde, beschreibung);
+        this.maBe = maBe;
     }
     
     
