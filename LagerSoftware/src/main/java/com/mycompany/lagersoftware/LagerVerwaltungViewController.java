@@ -148,6 +148,7 @@ public class LagerVerwaltungViewController implements Initializable {
         double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
         double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
         Kabel k1 = new Kabel (TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge);
+        App.getTechnik().add(k1);
     }
 
     @FXML
@@ -155,6 +156,7 @@ public class LagerVerwaltungViewController implements Initializable {
         double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
         double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
         Traversen t1 = new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(),TxtFTraversArt.getText(), sLaenge );
+        App.getTechnik().add(t1);
     }
 
     @FXML
@@ -162,6 +164,7 @@ public class LagerVerwaltungViewController implements Initializable {
         double sPreis = Double.parseDouble(TxtFPultMietpreis.getText());
         double sKanal = Double.parseDouble(TxtFPultKanele.getText());
         Pult p1 = new Pult(TxtFPultName.getText(), sPreis, TxtFPultBeschreibung.getText(), sKanal);
+        App.getTechnik().add(p1);
     }
 
     @FXML
@@ -170,13 +173,15 @@ public class LagerVerwaltungViewController implements Initializable {
        
     
         Buehnenplatte pl1 = new Buehnenplatte(TxtFPlatteName.getText(), sPreis, TxtFPlatteBeschreibung.getText(), TxtFPlatteMasse.getText());
+        App.getTechnik().add(pl1);
     }
 
     @FXML
     private void BtnSaveMonitor(ActionEvent event) {
-    double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
-    double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
-    Monitor m1 = new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll);
+        double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
+        double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
+        Monitor m1 = new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll);
+        App.getTechnik().add(m1);
     }
     
 }
