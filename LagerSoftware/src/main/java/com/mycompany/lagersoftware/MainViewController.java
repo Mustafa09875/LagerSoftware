@@ -48,6 +48,8 @@ public class MainViewController implements Initializable {
     private HBox TitleBar;
     @FXML
     private BorderPane borderpane;
+    @FXML
+    private AnchorPane AnchorPaneCenter;
 
     /**
      * Initializes the controller class.
@@ -114,7 +116,7 @@ public class MainViewController implements Initializable {
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(MenuePane);
 
-        slide.setToX(-160);
+        slide.setToX(-156);
         slide.play();
 
         MenuePane.setTranslateX(0);
