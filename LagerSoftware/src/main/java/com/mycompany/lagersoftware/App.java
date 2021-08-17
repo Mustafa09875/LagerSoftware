@@ -126,8 +126,16 @@ public class App extends Application {
         vermietungen = new ArrayList<Vermietung>();
         
         
+        Vermietung v = new Vermietung(new ArrayList<Techniker> techniker,pk, ,"12.12.2001","12.02.2021",13,4);
         
         launch();
     }
 
 }
+/*private ArrayList<Techniker>techniker;
+private Kunde kunde;
+private HashMap<Technik, Integer> objekte;
+private String start;
+private String ende;
+private int kosten;
+private int stunden;*/

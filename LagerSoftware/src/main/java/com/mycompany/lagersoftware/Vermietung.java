@@ -18,7 +18,6 @@ public  class Vermietung {
 
     private ArrayList<Techniker>techniker;
     private Kunde kunde;
-    private Technik technik;
     private HashMap<Technik, Integer> objekte;
     private String start;
     private String ende;
@@ -27,10 +26,9 @@ public  class Vermietung {
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
 
-    public Vermietung(ArrayList<Techniker> techniker, Kunde kunde, Technik technik, HashMap<Technik, Integer> objekte, String start, String ende, int kosten, int stunden) {
+    public Vermietung(ArrayList<Techniker> techniker, Kunde kunde, HashMap<Technik, Integer> objekte, String start, String ende, int kosten, int stunden) {
         this.techniker = techniker;
         this.kunde = kunde;
-        this.technik = technik;
         this.objekte = objekte;
         this.start = start;
         this.ende = ende;
@@ -79,13 +77,4 @@ public  class Vermietung {
     public void setKunde(Kunde kunde) {
         this.kunde = kunde;
     }
-
-    public Technik getTechnik() {
-        return technik;
-    }
-
-    public void setTechnik(Technik technik) {
-        this.technik = technik;
-    }
-
 }
