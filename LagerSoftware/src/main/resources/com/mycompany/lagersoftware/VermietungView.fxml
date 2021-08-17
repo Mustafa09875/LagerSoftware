@@ -84,9 +84,9 @@
             </Button>
          </children>
       </HBox>
-      <ListView fx:id="lwSelectKunde" layoutX="14.0" layoutY="81.0" onMouseClicked="#btnSelectKunde" prefHeight="200.0" prefWidth="165.0" />
-      <ListView fx:id="lwSelectTechniker" layoutX="225.0" layoutY="81.0" onMouseClicked="#btnSelectTechniker" prefHeight="200.0" prefWidth="166.0" />
-      <ListView fx:id="lwSelectTechnik" layoutX="437.0" layoutY="81.0" onMouseClicked="#btnSelectTechnik" prefHeight="200.0" prefWidth="166.0" />
+      <ListView fx:id="lwKunde" layoutX="14.0" layoutY="81.0" onMouseClicked="#btnSelectKunde" prefHeight="200.0" prefWidth="165.0" />
+      <ListView fx:id="lwTechniker" layoutX="225.0" layoutY="81.0" onMouseClicked="#btnSelectTechniker" prefHeight="200.0" prefWidth="166.0" />
+      <ListView fx:id="lwTechnik" layoutX="437.0" layoutY="81.0" onMouseClicked="#btnSelectTechnik" prefHeight="200.0" prefWidth="166.0" />
       <Label layoutX="14.0" layoutY="64.0" text="Kunden:" />
       <Label layoutX="225.0" layoutY="64.0" text="Techniker:" />
       <Label layoutX="437.0" layoutY="64.0" text="Technik" />

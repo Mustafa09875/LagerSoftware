@@ -24,11 +24,11 @@ public class VermietungViewController implements Initializable {
     @FXML
     private HBox LagerVerwaltungHbox;
     @FXML
-    private ListView<?> lwSelectKunde;
+    private ListView<String> lwKunde;
     @FXML
-    private ListView<?> lwSelectTechniker;
+    private ListView<String> lwTechniker;
     @FXML
-    private ListView<?> lwSelectTechnik;
+    private ListView<String> lwTechnik;
 
     /**
      * Initializes the controller class.
@@ -36,6 +36,17 @@ public class VermietungViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        for(Kunde k : App.getKunden()){
+            lwKunde.getItems().add(k.getVorname()+" "+k.getNachname());
+        }
+        
+        for(Techniker t : App.getTechniker()){
+            lwTechniker.getItems().add(t.getVorname()+" "+t.getNachname());
+        }
+        
+        for(Technik t : App.getTechnik()){
+            lwTechnik.getItems().add(t.getName()+" "+t.getBeschreibung());
+        }
     }    
 
     @FXML
