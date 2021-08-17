@@ -42,7 +42,7 @@ public class Traversen extends Technik{
     public String datenAusgeben() {
        String sPreis = String.valueOf(this.getMietPreiproStunde());
        String sLaenge = String.valueOf(this.getLaenge());
-        return "Traverse" + " - " +this.getName()+ " - "  + sPreis+ " - "  + this.getBeschreibung()+ " - "  + this.getArt() + " - " +sLaenge ;
+        return "Traverse" + " - " +this.getName()+ " - "  + sPreis+ " - "  + this.getBeschreibung()+ " - "  + this.getArt() + " - " + sLaenge ;
     }
     
     
