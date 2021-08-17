@@ -95,6 +95,9 @@ public class App extends Application {
         PrivateKundeModel pk = new PrivateKundeModel("Kudi","Budi","schmudi");
         GeschaeftsKundeModel gk = new GeschaeftsKundeModel("Ki","Bi","si","Gymhum");
         
+        techniker = new ArrayList<Techniker>();
+        
+        Techniker t = new Techniker("Eren","Jaeger",100.00,"Freiheit");
         
         
         launch();
