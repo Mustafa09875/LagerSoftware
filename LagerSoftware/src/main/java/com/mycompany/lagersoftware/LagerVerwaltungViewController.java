@@ -138,6 +138,9 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSaveBoxen(ActionEvent event) {
+        double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
+        Boxen b1 = new Boxen(TxtFBoxenName.getText(), sPreis, TxtFBoxenBeschreibung.getText(), TxtFBoxenGewicht.getText());
+        App.getTechnik().add(b1);
     }
 
     @FXML

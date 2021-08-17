@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import javafx.stage.StageStyle;
 
 /**
@@ -15,6 +16,15 @@ import javafx.stage.StageStyle;
 public class App extends Application {
 
     private static Scene scene;
+    private static ArrayList<Technik> technik;
+
+    public static ArrayList<Technik> getTechnik() {
+        return technik;
+    }
+
+    public static void setTechnik(ArrayList<Technik> technik) {
+        App.technik = technik;
+    }
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -34,6 +44,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        technik = new ArrayList<>();
         launch();
     }
 
