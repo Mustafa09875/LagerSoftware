@@ -28,7 +28,7 @@ public class Monitor extends Technik{
     public String datenAusgeben() {
         String sPreis = String.valueOf(this.getMietPreiproStunde());
         String sZoll = String.valueOf(this.getZollangabe());
-        return this.getName() + sPreis + this.getBeschreibung() + sZoll ;
+        return "Monitor" + " - " + this.getName()+ " - "  + sPreis + " - " + this.getBeschreibung()+ " - "  + sZoll ;
     }
 
     

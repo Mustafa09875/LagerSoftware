@@ -195,5 +195,12 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void clickSelect(MouseEvent event) {
+ 
+        int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+    
+        App.setSelectedTechnik(getTechnik().get(index));
+        System.out.println(App.getSelectedTechnik().getName());
     }
-}
+        
+    }
+

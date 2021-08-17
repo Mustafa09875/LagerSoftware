@@ -20,7 +20,15 @@ public class App extends Application {
     private static ArrayList<Kunde> kunden;
     private static ArrayList<Techniker> techniker;
     private static ArrayList<Vermietung> vermietungen;
+    private static Technik selectedTechnik;
 
+    public static Technik getSelectedTechnik() {
+        return selectedTechnik;
+    }
+
+    public static void setSelectedTechnik(Technik selectedTechnik) {
+        App.selectedTechnik = selectedTechnik;
+    }
     public static ArrayList<Vermietung> getVermietungen() {
         return vermietungen;
     }
@@ -92,7 +100,8 @@ public class App extends Application {
         Kabel ka = new Kabel("a",10.00,"a",37.00);
         Traversen tra = new Traversen("a",10.00,"a","a",12.00);
         Monitor mo = new Monitor("a",10.00,"a",37.00);
-        
+        App.getTechnik().add(bo);
+        App.getTechnik().add(pu);
         technikObjekte.put(bo, 10);
         technikObjekte.put(pu, 10);
         technikObjekte.put(ka, 10);

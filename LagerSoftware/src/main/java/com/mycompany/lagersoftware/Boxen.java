@@ -31,7 +31,7 @@ public class Boxen extends Technik{
     public String datenAusgeben() {
        String sPreis = String.valueOf(this.getMietPreiproStunde());
         String sGewicht = String.valueOf(this.getGewicht());
-        return this.getName() + sPreis + this.getBeschreibung() + sGewicht ;
+        return "Box" + " - " + this.getName() + " - " + sPreis + " - " + this.getBeschreibung() + " - " + sGewicht ;
     }
     
     

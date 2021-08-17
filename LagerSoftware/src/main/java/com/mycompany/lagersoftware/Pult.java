@@ -30,7 +30,7 @@ public class Pult extends Technik{
     public String datenAusgeben() {
         String sPreis = String.valueOf(this.getMietPreiproStunde());
         String sKanal = String.valueOf(this.getKanaele());
-        return this.getName() + sPreis + this.getBeschreibung() + sKanal ;
+        return "Pult" + " - " + this.getName() + " - " + sPreis+ " - "  + this.getBeschreibung() + " - "  + sKanal ;
     }
     
     

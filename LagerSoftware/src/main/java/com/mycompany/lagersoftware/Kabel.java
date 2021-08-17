@@ -30,7 +30,7 @@ public class Kabel extends Technik{
     public String datenAusgeben() {
         String sPreis = String.valueOf(this.getMietPreiproStunde());
         String sLaenge = String.valueOf(this.getLaenge());
-        return this.getName() + sPreis + this.getBeschreibung() + sLaenge ;
+        return "Kabel" + " - " + this.getName()+ " - "  + sPreis+ " - "  + this.getBeschreibung()+ " - "  + sLaenge ;
     }
 
     
