@@ -91,7 +91,9 @@ public class MainViewController implements Initializable {
     }    
 
     @FXML
-    private void BtnVermietung(ActionEvent event) {
+    private void BtnVermietung(ActionEvent event) throws IOException {
+        AnchorPane  pane = FXMLLoader.load(getClass().getResource("VermietungView.fxml"));
+        borderpane.setCenter(pane);
     }
 
     @FXML
