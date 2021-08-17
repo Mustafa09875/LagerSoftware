@@ -1,0 +1,27 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btnsave{
+     -fx-background-color:  #D1D5F7;
+}
+.btnsave:hover{
+    -fx-background-color: #D9DBEE;
+        -fx-font-size: 15px; 
+}
+
+.btnsave:pressed{
+    -fx-background-color:  #E3E3E3;
+    -fx-border-color: #FFFFFF;
+    
+}
+
+.tab{
+        -fx-background-color:  #D1D5F7 ;
+
+    -fx-pref-width : 99;
+    -fx-pref-height : 30;
+}
