@@ -8,12 +8,41 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javafx.stage.StageStyle;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
+    
+    private static HashMap technikObjekte;
+    private static ArrayList<Kunde> kunden;
+    private static ArrayList<Techniker> techniker;
+
+    public static ArrayList<Techniker> getTechniker() {
+        return techniker;
+    }
+
+    public static void setTechniker(ArrayList<Techniker> techniker) {
+        App.techniker = techniker;
+    }
+
+    public static ArrayList<Kunde> getKunden() {
+        return kunden;
+    }
+
+    public static void setKunden(ArrayList<Kunde> kunden) {
+        App.kunden = kunden;
+    }
+
+    public static HashMap getTechnikObjekte() {
+        return technikObjekte;
+    }
+
+    public static void setTechnikObjekte(HashMap technikObjekte) {
+        App.technikObjekte = technikObjekte;
+    }
 
     private static Scene scene;
     private static ArrayList<Technik> technik;
@@ -45,6 +74,29 @@ public class App extends Application {
 
     public static void main(String[] args) {
         technik = new ArrayList<>();
+        
+        technikObjekte = new HashMap();
+        
+        Boxen bo = new Boxen("a",10.00,"a",37.00);
+        Pult pu = new Pult("a",10.00,"a",37.00);
+        Buehnenplatte bue = new Buehnenplatte("a",10.00,"a","i");
+        Kabel ka = new Kabel("a",10.00,"a",37.00);
+        Traversen tra = new Traversen("a",10.00,"a","a",12.00);
+        Monitor mo = new Monitor("a",10.00,"a",37.00);
+        
+        technikObjekte.put(bo, 10);
+        technikObjekte.put(pu, 10);
+        technikObjekte.put(ka, 10);
+        technikObjekte.put(bue, 10);
+        technikObjekte.put(mo, 10);
+        
+        kunden = new ArrayList<Kunde>();
+        
+        PrivateKundeModel pk = new PrivateKundeModel("Kudi","Budi","schmudi");
+        GeschaeftsKundeModel gk = new GeschaeftsKundeModel("Ki","Bi","si","Gymhum");
+        
+        
+        
         launch();
     }
 
