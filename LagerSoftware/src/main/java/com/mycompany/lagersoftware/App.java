@@ -107,13 +107,25 @@ public class App extends Application {
         GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel("Wendy","sus","si","Gymhum");
         GeschaeftsKundeModel gk2 = new GeschaeftsKundeModel("This","is","a","robbery");
         
+        kunden.add(pk);
+        kunden.add(gk);
+        kunden.add(pk1);
+        kunden.add(pk1);
+        kunden.add(gk2);
+        
         techniker = new ArrayList<Techniker>();
         
         Techniker t = new Techniker("Eren","Jaeger",100.00,"Freiheit");
         Techniker t1 = new Techniker("Drunk","the Dank",100.00,"Wein");
         Techniker t2 = new Techniker("Checki","Chan",100.00,"BruceLeee");
         
+        techniker.add(t);
+        techniker.add(t1);
+        techniker.add(t2);
+        
         vermietungen = new ArrayList<Vermietung>();
+        
+        
         
         launch();
     }
