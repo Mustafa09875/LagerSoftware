@@ -100,6 +100,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private BorderPane BorderPaneTechnikSelect;
     /**
      * Initializes the controller class.
+     * @param url
      */
     @Override
     
@@ -205,24 +206,22 @@ public class LagerVerwaltungViewController implements Initializable {
         }
     }
 
-    @FXML
-<<<<<<< Updated upstream
-    private void clickSelect(MouseEvent event) {
+    private void clickSelect(MouseEvent event) throws IOException {
  
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
     
         App.setSelectedTechnik(getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
-    }
         
-=======
-    private void clickSelect(MouseEvent event) throws IOException {
-        TabPane.setVisible(false);
+          TabPane.setVisible(false);
          AnchorPaneTechnikAnpassen.setVisible(false);
         BorderPaneTechnikSelect.setVisible(true);
     AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
                 BorderPaneTechnikSelect.setCenter(pane);
-       
->>>>>>> Stashed changes
     }
+        
+
+  
+    
+}
 
