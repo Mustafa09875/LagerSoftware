@@ -40,7 +40,7 @@
 .tab{
         -fx-background-color:  #D1D5F7 ;
 
-    -fx-pref-width : 99;
+    -fx-pref-width : 100;
     -fx-pref-height : 30;
 }
 .tab-header-background{
