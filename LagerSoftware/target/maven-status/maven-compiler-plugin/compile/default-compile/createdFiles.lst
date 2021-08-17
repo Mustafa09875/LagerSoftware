@@ -13,5 +13,4 @@ com\mycompany\lagersoftware\Person.class
 com\mycompany\lagersoftware\Monitor.class
 com\mycompany\lagersoftware\Boxen.class
 com\mycompany\lagersoftware\Techniker.class
-com\mycompany\lagersoftware\App.class
 com\mycompany\lagersoftware\VermietungViewController.class

@@ -67,12 +67,7 @@ public  class Vermietung {
 
    
     
-    
-<<<<<<< Updated upstream
-    
-=======
-   
->>>>>>> Stashed changes
+
 
     public Kunde getKunde() {
         return kunde;
