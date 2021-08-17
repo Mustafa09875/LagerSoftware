@@ -18,16 +18,20 @@ public class Boxen extends Technik{
         super(name, mietPreiproStunde, beschreibung);
     }
 
-    @Override
-    public void datenAusgeben() {
-    }
-
+    
     public double getGewicht() {
         return gewicht;
     }
 
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
+    }
+
+    @Override
+    public String datenAusgeben() {
+       String sPreis = String.valueOf(this.getMietPreiproStunde());
+        String sGewicht = String.valueOf(this.getGewicht());
+        return this.getName() + sPreis + this.getBeschreibung() + sGewicht ;
     }
     
     

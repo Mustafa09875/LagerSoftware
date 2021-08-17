@@ -20,8 +20,7 @@ public class Traversen extends Technik{
     
 
     
-    public void datenAusgeben() {
-    }
+   
 
     public String getArt() {
         return art;
@@ -37,6 +36,13 @@ public class Traversen extends Technik{
 
     public void setLaenge(double laenge) {
         this.laenge = laenge;
+    }
+
+    @Override
+    public String datenAusgeben() {
+       String sPreis = String.valueOf(this.getMietPreiproStunde());
+       String sLaenge = String.valueOf(this.getLaenge());
+        return this.getName() + sPreis + this.getBeschreibung() + this.getArt() +sLaenge ;
     }
     
     

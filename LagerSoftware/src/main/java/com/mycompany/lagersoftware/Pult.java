@@ -17,9 +17,6 @@ public class Pult extends Technik{
         super(name, mietPreiproStunde, beschreibung);
     }
 
-    @Override
-    public void datenAusgeben() {
-    }
 
     public double getKanaele() {
         return kanaele;
@@ -27,6 +24,13 @@ public class Pult extends Technik{
 
     public void setKanaele(double kanaele) {
         this.kanaele = kanaele;
+    }
+
+    @Override
+    public String datenAusgeben() {
+        String sPreis = String.valueOf(this.getMietPreiproStunde());
+        String sKanal = String.valueOf(this.getKanaele());
+        return this.getName() + sPreis + this.getBeschreibung() + sKanal ;
     }
     
     

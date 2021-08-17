@@ -16,9 +16,19 @@ public class Monitor extends Technik{
         this.zollangabe = zollangabe;
     }
 
+    public double getZollangabe() {
+        return zollangabe;
+    }
+
+    public void setZollangabe(double zollangabe) {
+        this.zollangabe = zollangabe;
+    }
+
     @Override
     public String datenAusgeben() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sPreis = String.valueOf(this.getMietPreiproStunde());
+        String sZoll = String.valueOf(this.getZollangabe());
+        return this.getName() + sPreis + this.getBeschreibung() + sZoll ;
     }
 
     

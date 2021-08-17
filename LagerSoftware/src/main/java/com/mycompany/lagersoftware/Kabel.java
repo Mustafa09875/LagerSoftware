@@ -18,9 +18,22 @@ public class Kabel extends Technik{
         this.laenge = laenge;
     }
 
-    @Override
-    public void datenAusgeben() {
+    public double getLaenge() {
+        return laenge;
     }
+
+    public void setLaenge(double laenge) {
+        this.laenge = laenge;
+    }
+
+    @Override
+    public String datenAusgeben() {
+        String sPreis = String.valueOf(this.getMietPreiproStunde());
+        String sLaenge = String.valueOf(this.getLaenge());
+        return this.getName() + sPreis + this.getBeschreibung() + sLaenge ;
+    }
+
+    
 
    
     

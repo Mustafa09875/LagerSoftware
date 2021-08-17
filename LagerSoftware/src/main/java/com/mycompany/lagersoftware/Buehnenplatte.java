@@ -21,10 +21,7 @@ public class Buehnenplatte extends Technik{
     
     
 
-    @Override
-    public void datenAusgeben() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     public String getMaBe() {
         return maBe;
@@ -32,6 +29,13 @@ public class Buehnenplatte extends Technik{
 
     public void setMaBe(String maBe) {
         this.maBe = maBe;
+    }
+
+    @Override
+    public String datenAusgeben() {
+        String sPreis = String.valueOf(this.getMietPreiproStunde());
+        
+        return this.getName() + sPreis + this.getBeschreibung() + this.getMaBe() ;
     }
     
     
