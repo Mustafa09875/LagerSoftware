@@ -20,6 +20,9 @@ public class App extends Application {
     private static ArrayList<Kunde> kunden;
     private static ArrayList<Techniker> techniker;
     private static ArrayList<Vermietung> vermietungen;
+    
+    private static Kunde selectedKunde;
+    private static Techniker selectedTechniker;
     private static Technik selectedTechnik;
 
     public static Technik getSelectedTechnik() {

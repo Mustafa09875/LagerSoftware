@@ -63,6 +63,7 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSelectKunde(MouseEvent event) {
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde()));
     }
 
     @FXML
