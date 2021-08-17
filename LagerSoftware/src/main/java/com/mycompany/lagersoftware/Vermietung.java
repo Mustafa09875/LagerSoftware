@@ -70,13 +70,7 @@ public  class Vermietung {
    
     
     
-    public Techniker getTechniker() {
-        return techniker;
-    }
-
-    public void setTechniker(Techniker techniker) {
-        this.techniker = techniker;
-    }
+    
 
     public Kunde getKunde() {
         return kunde;

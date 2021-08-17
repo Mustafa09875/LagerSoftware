@@ -183,5 +183,12 @@ public class LagerVerwaltungViewController implements Initializable {
         Monitor m1 = new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll);
         App.getTechnik().add(m1);
     }
-    
+
+    @FXML
+    private void BtnTechnikReload(ActionEvent event) {
+        for(int i = 0; i <= App.getTechnik().size(); i++){
+            LWTechnikAnpassen.getItems().add(App.getTechnik().get(i).datenAusgeben());
+            App.getTechnik().remove(i);
+        }
+    }
 }
