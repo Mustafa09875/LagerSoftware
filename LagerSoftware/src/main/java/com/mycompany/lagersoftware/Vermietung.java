@@ -16,7 +16,7 @@ import java.util.HashMap;
  */
 public  class Vermietung {
 
-    private Techniker techniker;
+    private ArrayList<Techniker>techniker;
     private Kunde kunde;
     private Technik technik;
     private HashMap<Technik, Integer> objekte;
@@ -27,16 +27,18 @@ public  class Vermietung {
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
 
-    public Vermietung(Techniker techniker, Kunde kunde, Technik technik, HashMap<Technik, Integer> objekte, String start, String ende, int Stunden, int Kosten) {
+    public Vermietung(ArrayList<Techniker> techniker, Kunde kunde, Technik technik, HashMap<Technik, Integer> objekte, String start, String ende, int kosten, int stunden) {
         this.techniker = techniker;
         this.kunde = kunde;
         this.technik = technik;
         this.objekte = objekte;
         this.start = start;
         this.ende = ende;
-        this.stunden = stunden;
         this.kosten = kosten;
+        this.stunden = stunden;
     }
+
+    
 
 
     public String getStart() {
