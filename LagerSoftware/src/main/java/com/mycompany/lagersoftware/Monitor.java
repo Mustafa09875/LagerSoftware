@@ -16,10 +16,13 @@ public class Monitor extends Technik{
         this.zollangabe = zollangabe;
     }
 
-    
-    public void datenAusgeben() {
+    @Override
+    public String datenAusgeben() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
+    
     
     
     

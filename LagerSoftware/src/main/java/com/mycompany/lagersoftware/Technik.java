@@ -22,7 +22,7 @@ public abstract class Technik {
         this.beschreibung = beschreibung;
     }
     
-    public abstract void datenAusgeben();
+    public abstract String datenAusgeben();
 
     public String getName() {
         return name;
