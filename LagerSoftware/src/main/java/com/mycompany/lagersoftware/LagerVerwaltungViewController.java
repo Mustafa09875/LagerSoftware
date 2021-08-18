@@ -98,9 +98,10 @@ public class LagerVerwaltungViewController implements Initializable {
     
     @FXML
     private BorderPane BorderPaneTechnikSelect;
-    private AnchorPane AnchorPaneLwAktualisierenView;
+
     @FXML
     private AnchorPane AnchorPaneAktualisierungsView;
+
     /**
      * Initializes the controller class.
      * @param url
@@ -125,18 +126,24 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void BtnTechnikanlegen(ActionEvent event) {
         TabPane.setVisible(true);
+        BtnTechnikAnpassen.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
         
     }
 
     @FXML
     private void BtnTechnikAnpassen(ActionEvent event) {
-        AnchorPaneTechnikAnpassen.setVisible(true);
-        TabPane.setVisible(false);
+     TabPane.setVisible(false);
+     AnchorPaneAktualisierungsView.setVisible(false);
+     BtnTechnikAnpassen.setVisible(true);
       
     }
 
     @FXML
     private void BtnTechnikRegale(ActionEvent event) {
+        AnchorPaneAktualisierungsView.setVisible(false);
+        TabPane.setVisible(false);
+        BtnTechnikAnpassen.setVisible(false);
     }
 
     @FXML
@@ -200,7 +207,11 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void LWTechnikAnspassenSelect(MouseEvent event) throws IOException {
+
                   int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+
+       
+
         App.setSelectedTechnik(App.getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
  
@@ -210,11 +221,24 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnLWBearbeiten(ActionEvent event) throws IOException {
+
+    
+         
+        
+
     AnchorPaneAktualisierungsView.setVisible(true);
+
     System.out.println(App.getTechnik().size());
     AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));
+
+    
+   
+
                     BorderPaneTechnikSelect.setCenter(pane);
+                    
+                  
       
+
 
     }
 
@@ -222,6 +246,10 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnLwLöschen(ActionEvent event) {
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.getTechnik().remove(index);
+               AnchorPaneTechnikAnpassen.setVisible(false);
+               AnchorPaneTechnikAnpassen.setVisible(true);
+
+        
     }
     
 }

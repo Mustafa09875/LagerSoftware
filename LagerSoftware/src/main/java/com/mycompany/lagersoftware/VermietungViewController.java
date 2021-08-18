@@ -7,6 +7,7 @@ package com.mycompany.lagersoftware;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,9 +48,10 @@ public class VermietungViewController implements Initializable {
     @FXML
     private Label lbPreis;
     @FXML
-    private TextField tfAnzahl;
+    private TextField txtAnzahl;
     
     private ArrayList<Techniker> techniker;
+    private HashMap<Technik,Integer>technik;
 
     /**
      * Initializes the controller class.
@@ -69,6 +71,7 @@ public class VermietungViewController implements Initializable {
             lwTechnik.getItems().add(t.getName()+" "+t.getBeschreibung());
         }
         techniker = new ArrayList<Techniker>();
+        technik = new HashMap();
     }    
 
     @FXML
@@ -98,7 +101,6 @@ public class VermietungViewController implements Initializable {
         int index = lwTechniker.getSelectionModel().getSelectedIndex();
         App.setSelectedTechniker(App.getTechniker().get(index));
         lbSelectedTechniker.setText(App.getSelectedTechniker().getNachname());
-        techniker.add(App.getSelectedTechniker());
     }
 
     @FXML
@@ -112,11 +114,15 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnAddTechniker(ActionEvent event) {
-        
+        techniker.add(App.getSelectedTechniker());
+        System.out.println("Alle Techniker: "+techniker);
     }
 
     @FXML
     private void btnAddTechnik(ActionEvent event) {
+        int anzahl = Integer.parseInt(txtAnzahl.getText());
+        technik.put(App.getSelectedTechnik(), anzahl);
+        System.out.println("Gewählte Technik: "+technik);
     }
 
     @FXML
@@ -124,8 +130,9 @@ public class VermietungViewController implements Initializable {
         
         
         
-        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),));
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText()));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
+        App.getVermietungen().get(App.getVermietungen().size()-1).setObjekte(technik);
     }
     
 }

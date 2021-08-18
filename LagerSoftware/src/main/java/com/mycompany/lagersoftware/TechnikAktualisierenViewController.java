@@ -13,7 +13,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
 
 /**
  * FXML Controller class
@@ -218,16 +217,10 @@ public class TechnikAktualisierenViewController implements Initializable {
         App.getSelectedPlatte().setMietPreiproStunde(sPreis);
         App.getSelectedPlatte().setBeschreibung(TxtFPlatteBeschreibung.getText());
         App.getSelectedPlatte().setMaBe(TxtFPlatteMasse.getText());
-    }
-
-    @FXML
-    private void BtnSaveMonitor(ActionEvent event) throws IOException {
-        double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
-        double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
-        App.setSelectedMonitor(new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll));
-        App.setRoot("LagerVerwaltungView");
-    }
 
 
     
-}
+
+    }
+    }
+
