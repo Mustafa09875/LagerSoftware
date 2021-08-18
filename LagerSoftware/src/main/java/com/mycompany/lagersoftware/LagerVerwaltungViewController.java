@@ -99,6 +99,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private BorderPane BorderPaneTechnikSelect;
 
+    @FXML
     private AnchorPane AnchorPaneAktualisierungsView;
 
     /**
