@@ -238,24 +238,18 @@
                               <Image url="@Icons/icons8_work_30px_1.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="45.0" layoutY="206.0" prefHeight="33.0" prefWidth="96.0" text="Gewicht in KG:" textFill="#515151">
+                        <Label layoutX="106.0" layoutY="206.0" prefHeight="33.0" prefWidth="35.0" text="Art:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTraversGewicht" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Gewicht" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Label layoutX="106.0" layoutY="250.0" prefHeight="33.0" prefWidth="35.0" text="Art:" textFill="#515151">
+                        <TextField fx:id="TxtFTraversArt" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Art" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
+                        <Label layoutX="91.0" layoutY="250.0" prefHeight="33.0" prefWidth="50.0" text="Länge:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTraversArt" layoutX="140.0" layoutY="254.0" prefHeight="27.0" prefWidth="210.0" promptText="Art" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Label layoutX="91.0" layoutY="299.0" prefHeight="33.0" prefWidth="50.0" text="Länge:" textFill="#515151">
-                           <font>
-                              <Font name="Javanese Text" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="TxtFTraversLaenge" layoutX="140.0" layoutY="303.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFTraversLaenge" layoutX="140.0" layoutY="256.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
                      </children>
                   </AnchorPane>
                </content>
@@ -379,18 +373,12 @@
                               <Image url="@Icons/icons8_monitor_64px_1.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="95.0" layoutY="206.0" prefHeight="33.0" prefWidth="46.0" text="Maße:" textFill="#515151">
+                        <Label layoutX="70.0" layoutY="206.0" prefHeight="33.0" prefWidth="71.0" text="Zollangabe:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFMonitorMasse" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Maße" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Label layoutX="70.0" layoutY="250.0" prefHeight="33.0" prefWidth="71.0" text="Zollangabe:" textFill="#515151">
-                           <font>
-                              <Font name="Javanese Text" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="TxtFMonitorZollangabe" layoutX="140.0" layoutY="254.0" prefHeight="27.0" prefWidth="210.0" promptText="Zollangabe" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFMonitorZollangabe" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Zollangabe" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
                      </children>
                   </AnchorPane>
                </content>
