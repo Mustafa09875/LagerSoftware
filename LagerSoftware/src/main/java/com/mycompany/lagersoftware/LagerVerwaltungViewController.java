@@ -208,12 +208,11 @@ public class LagerVerwaltungViewController implements Initializable {
 
 
     @FXML
-    private void clickSelect(MouseEvent event) throws IOException {
-         
+    private void clickSelect(MouseEvent event) throws IOException { 
           TabPane.setVisible(false);
 
-         AnchorPaneTechnikAnpassen.setVisible(false);
-         BorderPaneTechnikSelect.setVisible(true);
+        AnchorPaneTechnikAnpassen.setVisible(false);
+        BorderPaneTechnikSelect.setVisible(true);
          
         AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
                 BorderPaneTechnikSelect.setCenter(pane);
@@ -222,12 +221,7 @@ public class LagerVerwaltungViewController implements Initializable {
        
         App.setSelectedTechnik(getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
-        Boxen bo1 = new Boxen("a", 1, "a", 1);
-        Buehnenplatte b1 = new Buehnenplatte("a", 1, "a", "1");
-        Monitor m1 = new Monitor("a", 1, "a", 1);
-        Kabel k1 = new Kabel("a", 1, "a", 1);
-        Pult p1 = new Pult("a", 1, "a", 1);
-        Traversen t1 = new Traversen("a", 1, "a", "1" ,1);
+        
         
         
         

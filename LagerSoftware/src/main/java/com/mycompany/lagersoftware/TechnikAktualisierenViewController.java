@@ -103,10 +103,35 @@ public class TechnikAktualisierenViewController implements Initializable {
             
             String sMasse = String.valueOf(App.getSelectedPlatte().getMaBe());
             String sPreis = String.valueOf(App.getSelectedPlatte().getMietPreiproStunde());
+            
             TxtFPlatteName.setText(App.getSelectedPlatte().getName());
             TxtFPlatteBeschreibung.setText(App.getSelectedPlatte().getName());
-            TxtFPlatteMasse.setText(sMasse);
-            TxtFPlatteMietpreis.setText(sPreis);
+            TxtFPlatteMasse.setText(sMasse);TxtFPlatteMietpreis.setText(sPreis);
+        } else if(App.getSelectedTechnik().getClass().equals(k1.getClass())){
+            App.setSelectedKabel((Kabel) App.getSelectedTechnik());
+            
+            String sPreis = String.valueOf(App.getSelectedKabel().getMietPreiproStunde());
+            String sLaenge = String.valueOf(App.getSelectedKabel().getLaenge());
+            
+            TxtFKabelName.setText(App.getSelectedKabel().getName());
+            TxtFKabelBeschreibung.setText(App.getSelectedKabel().getBeschreibung());
+            TxtFKabelMietpreis.setText(sPreis);
+            TxtFKabelName.setText(sLaenge);
+                    
+        } else if(App.getSelectedTechnik().getClass().equals(m1.getClass())){
+            App.setSelectedMonitor((Monitor) App.getSelectedTechnik());
+            
+            String sPreis = String.valueOf(App.getSelectedMonitor().getMietPreiproStunde());
+            String sZoll = String.valueOf(App.getSelectedMonitor().getZollangabe());
+            
+            TxtFMonitorName.setText(App.getSelectedMonitor().getName());
+            TxtFMonitorBeschreibung.setText(App.getSelectedMonitor().getBeschreibung());
+            TxtFMonitorMietpreis.setText(sPreis);
+            TxtFMonitorZollangabe.setText(sZoll);
+            
+            
+            
+            
         }
         }
        
