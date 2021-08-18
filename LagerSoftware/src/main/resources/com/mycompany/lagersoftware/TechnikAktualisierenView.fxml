@@ -10,10 +10,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="AnchorPaneViewAktual" prefHeight="411.0" prefWidth="600.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikAktualisierenViewController">
+<AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="600.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikAktualisierenViewController">
     <stylesheets>
         <URL value="@technikaktualisierenview.css" />
     </stylesheets>
@@ -286,10 +285,5 @@
             </Tab>
          </tabs>
       </TabPane>
-      <AnchorPane fx:id="AnchorPaneAktualEntfernen" layoutX="1.0" layoutY="1.0" prefHeight="425.0" prefWidth="616.0">
-         <children>
-            <BorderPane fx:id="BorderPainAktualisierungsViewEntfernen" prefHeight="425.0" prefWidth="616.0" />
-         </children>
-      </AnchorPane>
    </children>
 </AnchorPane>

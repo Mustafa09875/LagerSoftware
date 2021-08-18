@@ -10,12 +10,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
@@ -49,6 +46,8 @@ public class TechnikAktualisierenViewController implements Initializable {
     @FXML
     private TextField TxtFTraversMietpreis;
     @FXML
+    private TextField TxtFTraversGewicht;
+    @FXML
     private TextField TxtFTraversArt;
     @FXML
     private TextField TxtFTraversLaenge;
@@ -75,21 +74,15 @@ public class TechnikAktualisierenViewController implements Initializable {
     @FXML
     private TextField TxtFMonitorMietpreis;
     @FXML
+    private TextField TxtFMonitorMasse;
+    @FXML
     private TextField TxtFMonitorZollangabe;
-    @FXML
-    private AnchorPane AnchorPaneAktualEntfernen;
-    @FXML
-    private BorderPane BorderPainAktualisierungsViewEntfernen;
-    @FXML
-    private AnchorPane AnchorPaneViewAktual;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        AnchorPaneAktualEntfernen.setVisible(false);
-        
         Boxen bo1 = new Boxen("a", 1, "a", 1);
         Buehnenplatte b1 = new Buehnenplatte("a", 1, "a", "1");
         Monitor m1 = new Monitor("a", 1, "a", 1);
@@ -235,12 +228,6 @@ public class TechnikAktualisierenViewController implements Initializable {
         App.getSelectedMonitor().setBeschreibung(TxtFMonitorBeschreibung.getText());
         App.getSelectedMonitor().setMietPreiproStunde(sPreis);
         App.getSelectedMonitor().setZollangabe(sZoll);
-        
-        
-            AnchorPaneViewAktual.setVisible(false);
-            AnchorPaneAktualEntfernen.setVisible(true);
-            AnchorPane  pane = FXMLLoader.load(getClass().getResource("LagerVerwaltungView.fxml"));      
-            BorderPainAktualisierungsViewEntfernen.setCenter(pane);
         
     }
 
