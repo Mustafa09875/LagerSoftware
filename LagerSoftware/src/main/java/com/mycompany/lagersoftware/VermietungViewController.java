@@ -114,8 +114,6 @@ public class VermietungViewController implements Initializable {
         int anzahl = Integer.parseInt(txtAnzahl.getText());
         technik.put(App.getSelectedTechnik(), anzahl);
         System.out.println("Gewählte Technik: "+technik);
-        System.out.println("Gewählte Technik: "+technik);
-        System.out.println("Gewählte Technik: "+technik);
     }
 
 
@@ -126,7 +124,6 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnAddTechnik(ActionEvent event) {
-        System.out.println("Gewählte Technik: "+technik);
     }
 
     @FXML
@@ -136,7 +133,6 @@ public class VermietungViewController implements Initializable {
         
         //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText()));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
-        System.out.println("Gewählte Technik: "+technik);
     }
     
 }
