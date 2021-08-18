@@ -207,7 +207,6 @@ public class LagerVerwaltungViewController implements Initializable {
     }
 
 
-    @FXML
     private void clickSelect(MouseEvent event) throws IOException { 
           TabPane.setVisible(false);
 
