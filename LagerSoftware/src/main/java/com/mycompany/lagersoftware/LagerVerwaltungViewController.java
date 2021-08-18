@@ -98,11 +98,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private static ArrayList<Technik> technikarraylist;
     @FXML
     private BorderPane BorderPaneTechnikSelect;
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
-    @FXML
     private AnchorPane AnchorPaneAktualisierungsView;
 
     /**
