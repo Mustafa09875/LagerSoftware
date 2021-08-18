@@ -175,6 +175,10 @@ public class App extends Application {
         Monitor mo = new Monitor("a",10.00,"a",37.00);
         App.getTechnik().add(bo);
         App.getTechnik().add(pu);
+        App.getTechnik().add(bue);
+        App.getTechnik().add(ka);
+        App.getTechnik().add(tra);
+        App.getTechnik().add(mo);
         technikObjekte.put(bo, 10);
         technikObjekte.put(pu, 10);
         technikObjekte.put(ka, 10);
