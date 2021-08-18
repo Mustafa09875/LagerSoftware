@@ -6,6 +6,7 @@
 package com.mycompany.lagersoftware;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,6 +48,8 @@ public class VermietungViewController implements Initializable {
     private Label lbPreis;
     @FXML
     private TextField tfAnzahl;
+    
+    private ArrayList<Techniker> techniker;
 
     /**
      * Initializes the controller class.
@@ -65,6 +68,7 @@ public class VermietungViewController implements Initializable {
         for(Technik t : App.getTechnik()){
             lwTechnik.getItems().add(t.getName()+" "+t.getBeschreibung());
         }
+        techniker = new ArrayList<Techniker>();
     }    
 
     @FXML
@@ -94,6 +98,7 @@ public class VermietungViewController implements Initializable {
         int index = lwTechniker.getSelectionModel().getSelectedIndex();
         App.setSelectedTechniker(App.getTechniker().get(index));
         lbSelectedTechniker.setText(App.getSelectedTechniker().getNachname());
+        techniker.add(App.getSelectedTechniker());
     }
 
     @FXML
@@ -117,7 +122,10 @@ public class VermietungViewController implements Initializable {
     @FXML
     private void btnSaveVermietung(ActionEvent event) {
         
-        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),));
+        
+        
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),));
+        App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
     }
     
 }
