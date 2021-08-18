@@ -21,16 +21,15 @@ public  class Vermietung {
     private HashMap<Technik, Integer> objekte;
     private String start;
     private String ende;
-    private int kosten;
-    private int stunden;
+    private double kosten;
+    private double stunden;
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
 
-    public Vermietung(Kunde kunde, String start, String ende, int kosten, int stunden) {
+    public Vermietung(Kunde kunde, String start, String ende, double stunden) {
         this.kunde = kunde;
         this.start = start;
         this.ende = ende;
-        this.kosten = kosten;
         this.stunden = stunden;
     }
 
@@ -42,19 +41,19 @@ public  class Vermietung {
         this.techniker = techniker;
     }
 
-    public int getKosten() {
+    public double getKosten() {
         return kosten;
     }
 
-    public void setKosten(int kosten) {
+    public void setKosten(double kosten) {
         this.kosten = kosten;
     }
 
-    public int getStunden() {
+    public double getStunden() {
         return stunden;
     }
 
-    public void setStunden(int stunden) {
+    public void setStunden(double stunden) {
         this.stunden = stunden;
     }
 
