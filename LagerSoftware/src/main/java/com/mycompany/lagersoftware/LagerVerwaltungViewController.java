@@ -105,9 +105,17 @@ public class LagerVerwaltungViewController implements Initializable {
     @Override
     
     public void initialize(URL url, ResourceBundle rb) {
-        TabPane.setVisible(false);
-        AnchorPaneTechnikAnpassen.setVisible(true);
+        TabPane.setVisible(true);
+        AnchorPaneTechnikAnpassen.setVisible(false);
         BorderPaneTechnikSelect.setVisible(false);
+        try {      
+            AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));
+                    BorderPaneTechnikSelect.setCenter(pane);
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
         
          technikarraylist = new ArrayList <Technik>();
          Boxen b = new Boxen("asd", 12, "AS", 12);
@@ -220,9 +228,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnLWBearbeiten(ActionEvent event) throws IOException {
-    
-        AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
-                BorderPaneTechnikSelect.setCenter(pane);
+    TabPane.setVisible(false);
+    AnchorPaneTechnikAnpassen.setVisible(false);
+    BorderPaneTechnikSelect.setVisible(true);
+      
     }
 
     @FXML

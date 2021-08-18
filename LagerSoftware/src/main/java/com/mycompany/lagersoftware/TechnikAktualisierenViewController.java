@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 
 /**
  * FXML Controller class
@@ -76,6 +77,8 @@ public class TechnikAktualisierenViewController implements Initializable {
     private TextField TxtFMonitorMasse;
     @FXML
     private TextField TxtFMonitorZollangabe;
+    @FXML
+    private HBox LagerVerwaltungHbox;
 
     /**
      * Initializes the controller class.
@@ -179,6 +182,22 @@ public class TechnikAktualisierenViewController implements Initializable {
 
     @FXML
     private void BtnSaveMonitor(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnTechnikanlegen(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnTechnikAnpassen(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnTechnikRegale(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnTechnikReload(ActionEvent event) {
     }
 
     
