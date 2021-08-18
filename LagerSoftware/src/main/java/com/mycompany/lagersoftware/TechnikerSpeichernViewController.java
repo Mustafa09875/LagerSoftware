@@ -36,30 +36,48 @@ public class TechnikerSpeichernViewController implements Initializable {
     @FXML
     private AnchorPane BtnTechnikAnpassen;
     @FXML
-    private ListView<?> LWTechnikAnpassen;
+    private ListView<String> LWTechnikAnpassen;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        for(Techniker t: App.getTechniker()){
+        LWTechnikAnpassen.getItems().add(t.datenAusgeben());
+      }
     }    
 
     @FXML
     private void BtnTechnikerSpeichern(ActionEvent event) {
+        double sLohn = Double.parseDouble(TxtFTechnikerStundensatz.getText());
+        Techniker tk1 = new Techniker(TxtFTechnikerVorname.getText(), TxtFTechnikerNachname.getText(), sLohn, TxtFTechnikerBeschreibung.getText());
+        App.getTechniker().add(tk1);
     }
 
     @FXML
     private void LWTechnikerSelect(MouseEvent event) {
+        int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+        
+        App.setSelectedTechniker(App.getTechniker().get(0));
     }
+    
 
     @FXML
     private void BtnLWTechnikerBearbeiten(ActionEvent event) {
+    
     }
 
     @FXML
     private void BtnLwTechnikerLöschen(ActionEvent event) {
+        int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+        
+        App.getTechniker().remove(0);
+        
+        for(Techniker t: App.getTechniker()){
+            LWTechnikAnpassen.getItems().add(t.datenAusgeben());
+      }
+        
     }
     
 }

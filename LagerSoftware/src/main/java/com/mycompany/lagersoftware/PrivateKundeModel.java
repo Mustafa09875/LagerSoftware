@@ -16,5 +16,10 @@ public class PrivateKundeModel extends Kunde{
     public PrivateKundeModel(String vorname, String nachname, String adresse) {
         super(vorname, nachname, adresse);
     }
+
+    @Override
+    public String datenAusgeben() {
+       return "Privatkunde - " + this.getVorname() + " - " + this.getNachname() + " - " + this.getAdresse();
+    }
     
 }
