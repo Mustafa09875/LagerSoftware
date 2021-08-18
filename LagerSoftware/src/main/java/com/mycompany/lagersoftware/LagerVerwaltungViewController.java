@@ -98,6 +98,8 @@ public class LagerVerwaltungViewController implements Initializable {
     private static ArrayList<Technik> technikarraylist;
     @FXML
     private BorderPane BorderPaneTechnikSelect;
+    @FXML
+    private AnchorPane AnchorPaneLwAktualisierenView;
     /**
      * Initializes the controller class.
      * @param url
@@ -105,6 +107,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @Override
     
     public void initialize(URL url, ResourceBundle rb) {
+        AnchorPaneLwAktualisierenView.setVisible(false);
         TabPane.setVisible(false);
         AnchorPaneTechnikAnpassen.setVisible(true);
         BorderPaneTechnikSelect.setVisible(false);
@@ -207,25 +210,29 @@ public class LagerVerwaltungViewController implements Initializable {
     }
 
 
-    private void clickSelect(MouseEvent event) throws IOException { 
-          TabPane.setVisible(false);
 
+    @FXML
+    private void LWTechnikAnspassenSelect(MouseEvent event) throws IOException {
+         TabPane.setVisible(false);
         AnchorPaneTechnikAnpassen.setVisible(false);
-        BorderPaneTechnikSelect.setVisible(true);
          
         AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
                 BorderPaneTechnikSelect.setCenter(pane);
-
-        int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+                
+                /** int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
        
         App.setSelectedTechnik(getTechnik().get(index));
-        System.out.println(App.getSelectedTechnik().getName());
-        
-        
-        
-        
-        App.setRoot("TechnikAktualisierenView");
-        
+        System.out.println(App.getSelectedTechnik().getName());**/
+                
+    }
+
+
+    @FXML
+    private void BtnLWBearbeiten(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnLwLöschen(ActionEvent event) {
     }
     }
 

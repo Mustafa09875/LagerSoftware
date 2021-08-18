@@ -21,7 +21,6 @@
         <URL value="@lagerverwaltungview.css" />
     </stylesheets>
    <children>
-      <BorderPane fx:id="BorderPaneTechnikSelect" layoutX="2.0" layoutY="51.0" prefHeight="425.0" prefWidth="616.0" />
       <HBox fx:id="LagerVerwaltungHbox" prefHeight="47.0" prefWidth="613.0">
          <children>
             <Button mnemonicParsing="false" onAction="#BtnTechnikanlegen" prefHeight="46.0" prefWidth="160.0" stylesheets="@lagerverwaltungview.css" text="Technik anlegen" textFill="#515151">
@@ -92,7 +91,19 @@
       </HBox>
       <AnchorPane fx:id="BtnTechnikAnpassen" layoutX="-1.0" layoutY="53.0" prefHeight="421.0" prefWidth="616.0">
          <children>
-            <ListView fx:id="LWTechnikAnpassen" prefHeight="425.0" prefWidth="616.0" />
+            <ListView fx:id="LWTechnikAnpassen" onMouseClicked="#LWTechnikAnspassenSelect" prefHeight="425.0" prefWidth="616.0" />
+            <Button layoutX="18.0" layoutY="380.0" mnemonicParsing="false" onAction="#BtnLWBearbeiten" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Bearbeiten">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btnsave" />
+               </styleClass>
+            </Button>
+            <Button layoutX="470.0" layoutY="380.0" mnemonicParsing="false" onAction="#BtnLwLöschen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Löschen">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btnsave" />
+               </styleClass>
+            </Button>
          </children>
       </AnchorPane>
       <TabPane fx:id="TabPane" layoutX="1.0" layoutY="53.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@lagerverwaltungview.css" tabClosingPolicy="UNAVAILABLE">
@@ -383,5 +394,10 @@
             </Tab>
          </tabs>
       </TabPane>
+      <AnchorPane fx:id="AnchorPaneLwAktualisierenView" layoutX="2.0" layoutY="51.0" prefHeight="378.0" prefWidth="616.0">
+         <children>
+            <BorderPane fx:id="BorderPaneTechnikSelect" prefHeight="378.0" prefWidth="616.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
