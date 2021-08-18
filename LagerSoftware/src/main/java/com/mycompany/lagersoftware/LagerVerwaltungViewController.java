@@ -108,6 +108,7 @@ public class LagerVerwaltungViewController implements Initializable {
      */
     
     public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("Funktion testen");
         TabPane.setVisible(false);
         AnchorPaneTechnikAnpassen.setVisible(true);
         AnchorPaneAktualisierungsView.setVisible(false);
@@ -132,6 +133,7 @@ public class LagerVerwaltungViewController implements Initializable {
 
     public static void setTechnik(ArrayList<Technik> technik) {
         LagerVerwaltungViewController.technikarraylist = technik;
+        
     }
 
    
