@@ -61,11 +61,11 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutY="198.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="160.0" styleClass="button1" text="Kunden" textFill="#515151">
+            <Button layoutY="198.0" mnemonicParsing="false" onAction="#BtnKunden" prefHeight="42.0" prefWidth="160.0" styleClass="button1" text="Kunden" textFill="#515151">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icons/icons8_technical_support_64px_1.png" />
+                        <Image url="@Icons/icons8_client_management_50px.png" />
                      </image>
                   </ImageView>
                </graphic>

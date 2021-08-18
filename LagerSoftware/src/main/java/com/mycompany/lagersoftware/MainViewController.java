@@ -99,7 +99,9 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
-    private void BtnTechniker(ActionEvent event) {
+    private void BtnTechniker(ActionEvent event) throws IOException {
+        AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikerSpeichernView.fxml"));
+      borderpane.setCenter(pane);
     }
 
 
@@ -152,6 +154,12 @@ public class MainViewController implements Initializable {
             BtnMraus.setVisible(true);
             BtnMraus.requestFocus();
         });
+    }
+
+    @FXML
+    private void BtnKunden(ActionEvent event) throws IOException {
+        AnchorPane  pane = FXMLLoader.load(getClass().getResource("KundenSpeichernView.fxml"));
+      borderpane.setCenter(pane);
     }
     }
 
