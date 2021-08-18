@@ -19,6 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
+
 /**
  * FXML Controller class
  *
@@ -132,7 +133,7 @@ public class VermietungViewController implements Initializable {
         double preis=0;
         
         //Kunde, Start/End datum,Techniker und Technik wird hinzugefuegt
-        App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),stunden));
+        App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),stunden, 0.2));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
         App.getVermietungen().get(App.getVermietungen().size()-1).setObjekte(technik);
         
@@ -152,7 +153,7 @@ public class VermietungViewController implements Initializable {
         String kosten = String.valueOf(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten());
         lbPreis.setText(kosten);
         
-        System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten()+"<---- Kosten/ Kunde/in ----> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
+        System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten() * 0.2+"<---- Kosten/ Kunde/in ----> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
     }
     
 }
