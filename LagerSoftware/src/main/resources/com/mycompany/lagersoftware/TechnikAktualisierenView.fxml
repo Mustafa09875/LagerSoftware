@@ -12,18 +12,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="com.mycompany.lagersoftware.TechnikAktualisierenViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikAktualisierenViewController">
     <stylesheets>
         <URL value="@technikaktualisierenview.css" />
     </stylesheets>
    <children>
-      <TabPane fx:id="TabPane" layoutY="-1.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@lagerverwaltungview.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="TabPane" layoutY="-1.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@technikaktualisierenview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab style="-fx-Cursor: Hand;" text="Box">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFBoxenName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFBoxenName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="34.0" text="Name:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -39,9 +39,9 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFBoxenBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <TextField fx:id="TxtFBoxenMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveBoxen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Speichern">
+                        <TextField fx:id="TxtFBoxenBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <TextField fx:id="TxtFBoxenMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveBoxen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -57,13 +57,7 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFBoxenGewicht" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Gewicht" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="480.0" layoutY="338.0" mnemonicParsing="false" onAction="#BtnAktualisierenBoxen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Akutalisieren">
-                           <styleClass>
-                              <String fx:value="btn" />
-                              <String fx:value="btnsave" />
-                           </styleClass>
-                        </Button>
+                        <TextField fx:id="TxtFBoxenGewicht" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Gewicht" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>
@@ -72,7 +66,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFKabelName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFKabelName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="34.0" text="Name:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -88,9 +82,9 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFKabelBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <TextField fx:id="TxtFKabelMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveKabel" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Speichern">
+                        <TextField fx:id="TxtFKabelBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <TextField fx:id="TxtFKabelMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveKabel" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -106,13 +100,7 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFKabelLaenge" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="480.0" layoutY="338.0" mnemonicParsing="false" onAction="#BtnAktualisierenKabel" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Akutalisieren">
-                           <styleClass>
-                              <String fx:value="btn" />
-                              <String fx:value="btnsave" />
-                           </styleClass>
-                        </Button>
+                        <TextField fx:id="TxtFKabelLaenge" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>
@@ -121,7 +109,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFTraversName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFTraversName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="34.0" text="Name:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -137,9 +125,9 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTraversBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <TextField fx:id="TxtFTraversMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveTravers" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Speichern">
+                        <TextField fx:id="TxtFTraversBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <TextField fx:id="TxtFTraversMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveTravers" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -155,25 +143,19 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTraversGewicht" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Gewicht" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFTraversGewicht" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Gewicht" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="106.0" layoutY="250.0" prefHeight="33.0" prefWidth="35.0" text="Art:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTraversArt" layoutX="140.0" layoutY="254.0" prefHeight="27.0" prefWidth="210.0" promptText="Art" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFTraversArt" layoutX="140.0" layoutY="254.0" prefHeight="27.0" prefWidth="210.0" promptText="Art" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="91.0" layoutY="299.0" prefHeight="33.0" prefWidth="50.0" text="Länge:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTraversLaenge" layoutX="140.0" layoutY="303.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="480.0" layoutY="338.0" mnemonicParsing="false" onAction="#BtnAktualisierenTraversen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Akutalisieren">
-                           <styleClass>
-                              <String fx:value="btn" />
-                              <String fx:value="btnsave" />
-                           </styleClass>
-                        </Button>
+                        <TextField fx:id="TxtFTraversLaenge" layoutX="140.0" layoutY="303.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>
@@ -182,7 +164,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFPultName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFPultName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="34.0" text="Name:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -198,9 +180,9 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFPultBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <TextField fx:id="TxtFPultMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSavePult" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Speichern">
+                        <TextField fx:id="TxtFPultBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <TextField fx:id="TxtFPultMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSavePult" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -216,13 +198,7 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFPultKanele" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Kanäle" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="480.0" layoutY="338.0" mnemonicParsing="false" onAction="#BtnAktualisierenPult" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Akutalisieren">
-                           <styleClass>
-                              <String fx:value="btn" />
-                              <String fx:value="btnsave" />
-                           </styleClass>
-                        </Button>
+                        <TextField fx:id="TxtFPultKanele" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Kanäle" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>
@@ -231,7 +207,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFPlatteName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFPlatteName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="34.0" text="Name:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -247,9 +223,9 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFPlatteBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <TextField fx:id="TxtFPlatteMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSavePlatte" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Speichern">
+                        <TextField fx:id="TxtFPlatteBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <TextField fx:id="TxtFPlatteMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSavePlatte" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -265,13 +241,7 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFPlatteMasse" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Maße" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="480.0" layoutY="338.0" mnemonicParsing="false" onAction="#BtnAktualisierenBuehnenplatte" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Akutalisieren">
-                           <styleClass>
-                              <String fx:value="btn" />
-                              <String fx:value="btnsave" />
-                           </styleClass>
-                        </Button>
+                        <TextField fx:id="TxtFPlatteMasse" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Maße" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>
@@ -280,7 +250,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFMonitorName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFMonitorName" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Name" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="34.0" text="Name:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -296,9 +266,9 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFMonitorBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <TextField fx:id="TxtFMonitorMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveMonitor" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Speichern">
+                        <TextField fx:id="TxtFMonitorBeschreibung" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <TextField fx:id="TxtFMonitorMietpreis" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Mietpreis pro Stunde" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnSaveMonitor" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -314,19 +284,13 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFMonitorMasse" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Maße" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
+                        <TextField fx:id="TxtFMonitorMasse" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Maße" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="70.0" layoutY="250.0" prefHeight="33.0" prefWidth="71.0" text="Zollangabe:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFMonitorZollangabe" layoutX="140.0" layoutY="254.0" prefHeight="27.0" prefWidth="210.0" promptText="Zollangabe" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
-                        <Button layoutX="480.0" layoutY="338.0" mnemonicParsing="false" onAction="#BtnAktualisierenMonitor" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Akutalisieren">
-                           <styleClass>
-                              <String fx:value="btn" />
-                              <String fx:value="btnsave" />
-                           </styleClass>
-                        </Button>
+                        <TextField fx:id="TxtFMonitorZollangabe" layoutX="140.0" layoutY="254.0" prefHeight="27.0" prefWidth="210.0" promptText="Zollangabe" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>

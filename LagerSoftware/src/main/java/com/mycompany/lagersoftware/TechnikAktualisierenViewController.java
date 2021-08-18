@@ -181,28 +181,5 @@ public class TechnikAktualisierenViewController implements Initializable {
     private void BtnSaveMonitor(ActionEvent event) {
     }
 
-    @FXML
-    private void BtnAktualisierenBoxen(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnAktualisierenKabel(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnAktualisierenTraversen(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnAktualisierenPult(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnAktualisierenBuehnenplatte(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnAktualisierenMonitor(ActionEvent event) {
-    }
     
 }

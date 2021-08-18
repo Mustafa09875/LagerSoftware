@@ -220,20 +220,17 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnLWBearbeiten(ActionEvent event) throws IOException {
-          TabPane.setVisible(false);
-        AnchorPaneTechnikAnpassen.setVisible(false);
-         
+    
         AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
                 BorderPaneTechnikSelect.setCenter(pane);
-                
     }
 
     @FXML
     private void BtnLwLöschen(ActionEvent event) {
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.getTechnik().remove(index);
-                TabPane.setVisible(false);
-                TabPane.setVisible(true);
+               AnchorPaneTechnikAnpassen.setVisible(false);
+               AnchorPaneTechnikAnpassen.setVisible(true);
 
         
     }
