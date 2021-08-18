@@ -85,9 +85,6 @@ public class VermietungViewController implements Initializable {
     private void btnSelectTechnik(MouseEvent event) {
     }
 
-    @FXML
-    private void btnAddKunde(ActionEvent event) {
-    }
 
     @FXML
     private void btnAddTechniker(ActionEvent event) {
@@ -95,6 +92,10 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnAddTechnik(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnSaveVermietung(ActionEvent event) {
     }
     
 }
