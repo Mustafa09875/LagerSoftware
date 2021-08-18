@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\App.java
 C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Boxen.java
 C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\LagerVerwaltungViewController.java
@@ -20,26 +19,3 @@ C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\myc
 C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Person.java
 C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Buehnenplatte.java
 C:\Users\Test\Documents\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Techniker.java
-=======
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Kunde.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\TechnikerSpeichernViewController.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\MainViewController.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\App.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Kabel.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Techniker.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Person.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\module-info.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Pult.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Traversen.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\VermietungViewController.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\GeschaeftsKundeModel.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Vermietung.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Technik.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Buehnenplatte.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Monitor.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\PrivateKundeModel.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\KundenSpeichernViewController.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\LagerVerwaltungViewController.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\TechnikAktualisierenViewController.java
-C:\Users\lukas\OneDrive\Dokumente\GitHub\LagerSoftware\LagerSoftware\src\main\java\com\mycompany\lagersoftware\Boxen.java
->>>>>>> 728b827d5a378b4caafc927999f16e48d72879db

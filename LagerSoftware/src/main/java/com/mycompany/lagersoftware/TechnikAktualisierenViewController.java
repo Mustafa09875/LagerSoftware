@@ -10,9 +10,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
@@ -46,8 +49,6 @@ public class TechnikAktualisierenViewController implements Initializable {
     @FXML
     private TextField TxtFTraversMietpreis;
     @FXML
-    private TextField TxtFTraversGewicht;
-    @FXML
     private TextField TxtFTraversArt;
     @FXML
     private TextField TxtFTraversLaenge;
@@ -74,9 +75,11 @@ public class TechnikAktualisierenViewController implements Initializable {
     @FXML
     private TextField TxtFMonitorMietpreis;
     @FXML
-    private TextField TxtFMonitorMasse;
-    @FXML
     private TextField TxtFMonitorZollangabe;
+    @FXML
+    private AnchorPane AncPaneAktuEntfernen;
+    @FXML
+    private BorderPane BorderPaneNeueView;
 
     /**
      * Initializes the controller class.
@@ -160,6 +163,15 @@ public class TechnikAktualisierenViewController implements Initializable {
 
      @FXML
     private void BtnSaveBoxen(ActionEvent event) throws IOException {
+         AnchorPane pane = FXMLLoader.load(getClass().getResource("LagerVerwaltungView.fxml"));
+        BorderPaneNeueView.setCenter(pane);
+        
+        AncPaneAktuEntfernen.setVisible(true);
+
+        BorderPaneNeueView.setCenter(pane);
+        
+        
+        
         double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
         double sGewicht = Double.parseDouble(TxtFBoxenGewicht.getText());
         
