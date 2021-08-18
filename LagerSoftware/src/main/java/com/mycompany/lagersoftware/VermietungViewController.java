@@ -6,12 +6,14 @@
 package com.mycompany.lagersoftware;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
@@ -36,6 +38,18 @@ public class VermietungViewController implements Initializable {
     private Label lbSelectedTechniker;
     @FXML
     private Label lbSelectedTechnik;
+    @FXML
+    private TextField txtStart;
+    @FXML
+    private TextField txtEnde;
+    @FXML
+    private TextField txtStunden;
+    @FXML
+    private Label lbPreis;
+    @FXML
+    private TextField tfAnzahl;
+    
+    private ArrayList<Techniker> techniker;
 
     /**
      * Initializes the controller class.
@@ -54,6 +68,7 @@ public class VermietungViewController implements Initializable {
         for(Technik t : App.getTechnik()){
             lwTechnik.getItems().add(t.getName()+" "+t.getBeschreibung());
         }
+        techniker = new ArrayList<Techniker>();
     }    
 
     @FXML
@@ -70,23 +85,34 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSelectKunde(MouseEvent event) {
-        //Ausgewähltes Auto wird angezeigt
+        //Ausgewählter Kunde wird angezeigt
         int index = lwKunde.getSelectionModel().getSelectedIndex();
         App.setSelectedKunde(App.getKunden().get(index));
         lbSelectedKunde.setText(App.getSelectedKunde().getNachname());
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),null,null,0,0));
     }
 
     @FXML
     private void btnSelectTechniker(MouseEvent event) {
+        //Ausgewählter Techniker wird angezeigt
+        int index = lwTechniker.getSelectionModel().getSelectedIndex();
+        App.setSelectedTechniker(App.getTechniker().get(index));
+        lbSelectedTechniker.setText(App.getSelectedTechniker().getNachname());
+        techniker.add(App.getSelectedTechniker());
     }
 
     @FXML
     private void btnSelectTechnik(MouseEvent event) {
+        //Ausgewählte Technik wird angezeigt
+        int index = lwTechnik.getSelectionModel().getSelectedIndex();
+        App.setSelectedTechnik(App.getTechnik().get(index));
+        lbSelectedTechnik.setText(App.getSelectedTechnik().getName());
     }
 
 
     @FXML
     private void btnAddTechniker(ActionEvent event) {
+        
     }
 
     @FXML
@@ -95,7 +121,11 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSaveVermietung(ActionEvent event) {
-        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),));
+        
+        
+        
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),));
+        App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
     }
     
 }
