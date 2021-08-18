@@ -229,6 +229,8 @@ public class LagerVerwaltungViewController implements Initializable {
         AnchorPaneAktualisierungsView.setVisible(true);
 
         BorderPaneTechnikSelect.setCenter(pane);
+        
+        TabPane.getSelectionModel().select(3);
 
     }
 
