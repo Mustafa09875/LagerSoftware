@@ -167,23 +167,25 @@ public class App extends Application {
         
         technikObjekte = new HashMap();
         
-        Boxen bo = new Boxen("a",10.00,"a",37.00);
-        Pult pu = new Pult("a",10.00,"a",37.00);
-        Buehnenplatte bue = new Buehnenplatte("a",10.00,"a","i");
-        Kabel ka = new Kabel("a",10.00,"a",37.00);
-        Traversen tra = new Traversen("a",10.00,"a","a",12.00);
-        Monitor mo = new Monitor("a",10.00,"a",37.00);
+        Boxen bo = new Boxen("boxi",10.00,"a",37.00);
+        Pult pu = new Pult("pulti",10.00,"a",37.00);
+        Buehnenplatte bue = new Buehnenplatte("buehnenplatte",10.00,"a","i");
+        Kabel ka = new Kabel("Kabel",10.00,"Caleb a",37.00);
+        Traversen tra = new Traversen("Travers",10.00,"von Travis Scott","a",12.00);
+        Monitor mo = new Monitor("Monitor",10.00,"Motomoto",37.00);
+        
         App.getTechnik().add(bo);
         App.getTechnik().add(pu);
         App.getTechnik().add(bue);
         App.getTechnik().add(ka);
         App.getTechnik().add(tra);
         App.getTechnik().add(mo);
-        technikObjekte.put(bo, 10);
-        technikObjekte.put(pu, 10);
-        technikObjekte.put(ka, 10);
-        technikObjekte.put(bue, 10);
-        technikObjekte.put(mo, 10);
+        technikObjekte.put(bo, 50);
+        technikObjekte.put(pu, 50);
+        technikObjekte.put(ka, 50);
+        technikObjekte.put(bue, 50);
+        technikObjekte.put(tra, 50);
+        technikObjekte.put(mo, 50);
         
         kunden = new ArrayList<Kunde>();
         
