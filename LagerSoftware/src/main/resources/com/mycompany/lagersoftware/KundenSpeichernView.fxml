@@ -17,7 +17,7 @@
         <URL value="@/com/mycompany/lagersoftware/Icons/kundenspeichernview.css" />
     </stylesheets>
    <children>
-      <TabPane fx:id="TabPane" layoutX="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@technikaktualisierenview.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="TabPane" layoutX="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/kundenspeichernview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab style="-fx-Cursor: Hand;" text="Privatekunde">
                <content>
