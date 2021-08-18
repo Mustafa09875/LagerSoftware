@@ -48,6 +48,7 @@ public class KundenAktualisierenViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        BorderPaneZurück.setVisible(false);
         // TODO
     }    
 

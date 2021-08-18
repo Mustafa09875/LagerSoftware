@@ -53,6 +53,8 @@ public class KundenSpeichernViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        BorderPaneKundeaktualisieren.setVisible(false);
+        
         for(Kunde k: App.getKunden()){
             LWKundenAnpassen.getItems().add(k.datenAusgeben());
         }
