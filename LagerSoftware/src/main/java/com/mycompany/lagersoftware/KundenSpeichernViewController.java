@@ -47,10 +47,12 @@ public class KundenSpeichernViewController implements Initializable {
 
     @FXML
     private void BtnPrivatKundeSpeichern(ActionEvent event) {
+        PrivateKundeModel pk1 = new PrivateKundeModel(TxtFPrivatKundeVorname.getText(), TxtFPrivatKundeNachname.getText(), TxtFPrivatKundeAdresse.getText());
     }
 
     @FXML
     private void BtnGeschaeftsKundeSpeichern(ActionEvent event) {
+        GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel(TxtFGeschaeftsKundeVorname.getText(), TxtFGeschaeftsKundeNachname.getText(), TxtFGeschaeftsKundeAdresse.getText(), TxtFGeschaeftsKundeFirma.getText());
     }
     
 }
