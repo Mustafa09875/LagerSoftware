@@ -198,7 +198,7 @@ public class App extends Application {
         kunden.add(pk);
         kunden.add(gk);
         kunden.add(pk1);
-        kunden.add(pk1);
+        kunden.add(gk1);
         kunden.add(gk2);
         
         techniker = new ArrayList<Techniker>();
