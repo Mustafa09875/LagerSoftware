@@ -93,7 +93,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private AnchorPane BtnTechnikAnpassen;
     @FXML
     private ListView<String> LWTechnikAnpassen;
-    
+
     private Technik technik;
     private static ArrayList<Technik> technikarraylist;
     @FXML
@@ -104,28 +104,25 @@ public class LagerVerwaltungViewController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
      * @param url
      */
-    
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println("Funktion testen");
         TabPane.setVisible(false);
         AnchorPaneTechnikAnpassen.setVisible(true);
         AnchorPaneAktualisierungsView.setVisible(false);
-      
-        
 
-        
-         technikarraylist = new ArrayList <Technik>();
-         Boxen b = new Boxen("asd", 12, "AS", 12);
-         getTechnik().add(b);
-         getTechnik().add(b);
-        
-        for(Technik t: App.getTechnik()){
+        technikarraylist = new ArrayList<Technik>();
+        Boxen b = new Boxen("asd", 12, "AS", 12);
+        getTechnik().add(b);
+        getTechnik().add(b);
+
+        for (Technik t : App.getTechnik()) {
             LWTechnikAnpassen.getItems().add(t.datenAusgeben());
         }
-        
-   }    
+
+    }
 
     public static ArrayList<Technik> getTechnik() {
         return technikarraylist;
@@ -133,27 +130,23 @@ public class LagerVerwaltungViewController implements Initializable {
 
     public static void setTechnik(ArrayList<Technik> technik) {
         LagerVerwaltungViewController.technikarraylist = technik;
-        
+
     }
 
-   
-    
-    
-    
     @FXML
     private void BtnTechnikanlegen(ActionEvent event) {
         TabPane.setVisible(true);
         BtnTechnikAnpassen.setVisible(false);
         AnchorPaneAktualisierungsView.setVisible(false);
-        
+
     }
 
     @FXML
     private void BtnTechnikAnpassen(ActionEvent event) {
-     TabPane.setVisible(false);
-     AnchorPaneAktualisierungsView.setVisible(false);
-     BtnTechnikAnpassen.setVisible(true);
-      
+        TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+
     }
 
     @FXML
@@ -175,7 +168,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnSaveKabel(ActionEvent event) {
         double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
         double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
-        Kabel k1 = new Kabel (TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge);
+        Kabel k1 = new Kabel(TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge);
         App.getTechnik().add(k1);
     }
 
@@ -183,7 +176,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnSaveTravers(ActionEvent event) {
         double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
         double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
-        Traversen t1 = new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(),TxtFTraversArt.getText(), sLaenge );
+        Traversen t1 = new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(), TxtFTraversArt.getText(), sLaenge);
         App.getTechnik().add(t1);
     }
 
@@ -198,8 +191,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void BtnSavePlatte(ActionEvent event) {
         double sPreis = Double.parseDouble(TxtFPlatteMietpreis.getText());
-       
-    
+
         Buehnenplatte pl1 = new Buehnenplatte(TxtFPlatteName.getText(), sPreis, TxtFPlatteBeschreibung.getText(), TxtFPlatteMasse.getText());
         App.getTechnik().add(pl1);
     }
@@ -208,45 +200,35 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnSaveMonitor(ActionEvent event) {
         double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
         double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
-        Monitor m1 = new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll);
+        Monitor m1 = new Monitor(TxtFMonitorName.getText(), sPreis, TxtFMonitorBeschreibung.getText(), sZoll);
         App.getTechnik().add(m1);
     }
 
     @FXML
     private void BtnTechnikReload(ActionEvent event) {
-        for(int i = 0; i <= App.getTechnik().size(); i++){
+        for (int i = 0; i <= App.getTechnik().size(); i++) {
             LWTechnikAnpassen.getItems().add(App.getTechnik().get(i).datenAusgeben());
             App.getTechnik().remove(i);
         }
     }
-
-
 
     @FXML
     private void LWTechnikAnspassenSelect(MouseEvent event) throws IOException {
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.setSelectedTechnik(App.getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
- 
-                
-    }
 
+    }
 
     @FXML
     private void BtnLWBearbeiten(ActionEvent event) throws IOException {
 
-    
-        AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));
         BorderPaneTechnikSelect.setCenter(pane);
 
-    AnchorPaneAktualisierungsView.setVisible(true);
-    
-   
-                    BorderPaneTechnikSelect.setCenter(pane);
-                    
-                  
-      
+        AnchorPaneAktualisierungsView.setVisible(true);
 
+        BorderPaneTechnikSelect.setCenter(pane);
 
     }
 
@@ -254,15 +236,9 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnLwLöschen(ActionEvent event) throws IOException {
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.getTechnik().remove(index);
-               AnchorPaneTechnikAnpassen.setVisible(false);
-               AnchorPaneTechnikAnpassen.setVisible(true);
-           
-    
-   
+        AnchorPaneTechnikAnpassen.setVisible(false);
+        AnchorPaneTechnikAnpassen.setVisible(true);
 
-        
     }
-    
+
 }
-
-
