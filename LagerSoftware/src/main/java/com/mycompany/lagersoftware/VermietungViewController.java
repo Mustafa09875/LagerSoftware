@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
@@ -36,6 +37,14 @@ public class VermietungViewController implements Initializable {
     private Label lbSelectedTechniker;
     @FXML
     private Label lbSelectedTechnik;
+    @FXML
+    private TextField txtStart;
+    @FXML
+    private TextField txtEnde;
+    @FXML
+    private TextField txtStunden;
+    @FXML
+    private Label lbPreis;
 
     /**
      * Initializes the controller class.
@@ -78,15 +87,24 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSelectTechniker(MouseEvent event) {
+        //Ausgewähltes Auto wird angezeigt
+        int index = lwTechniker.getSelectionModel().getSelectedIndex();
+        App.setSelectedTechniker(App.getTechniker().get(index));
+        lbSelectedTechniker.setText(App.getSelectedTechniker().getNachname());
     }
 
     @FXML
     private void btnSelectTechnik(MouseEvent event) {
+        //Ausgewähltes Auto wird angezeigt
+        int index = lwTechnik.getSelectionModel().getSelectedIndex();
+        App.setSelectedTechnik(App.getTechnik().get(index));
+        lbSelectedTechnik.setText(App.getSelectedTechnik().getName());
     }
 
 
     @FXML
     private void btnAddTechniker(ActionEvent event) {
+        
     }
 
     @FXML
@@ -95,6 +113,7 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSaveVermietung(ActionEvent event) {
+        
         //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),));
     }
     
