@@ -228,6 +228,7 @@ public class TechnikAktualisierenViewController implements Initializable {
         App.getSelectedMonitor().setBeschreibung(TxtFMonitorBeschreibung.getText());
         App.getSelectedMonitor().setMietPreiproStunde(sPreis);
         App.getSelectedMonitor().setZollangabe(sZoll);
+        
     }
 
 

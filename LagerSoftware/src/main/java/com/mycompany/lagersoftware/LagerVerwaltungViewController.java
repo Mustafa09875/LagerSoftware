@@ -251,11 +251,14 @@ public class LagerVerwaltungViewController implements Initializable {
     }
 
     @FXML
-    private void BtnLwLöschen(ActionEvent event) {
+    private void BtnLwLöschen(ActionEvent event) throws IOException {
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.getTechnik().remove(index);
                AnchorPaneTechnikAnpassen.setVisible(false);
                AnchorPaneTechnikAnpassen.setVisible(true);
+           
+    
+   
 
         
     }
