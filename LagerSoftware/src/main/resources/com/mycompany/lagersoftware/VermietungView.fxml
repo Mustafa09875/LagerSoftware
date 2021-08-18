@@ -96,7 +96,7 @@
       <Button layoutX="335.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnAddTechniker" text="Wählen" />
       <Label fx:id="lbSelectedTechnik" layoutX="441.0" layoutY="282.0" text="Gewählte Technik" />
       <Button layoutX="545.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnAddTechnik" text="Wählen" />
-      <Button layoutX="556.0" layoutY="368.0" mnemonicParsing="false" onAction="#btnSaveVermietung" text="Fertig" />
+      <Button layoutX="556.0" layoutY="381.0" mnemonicParsing="false" onAction="#btnSaveVermietung" text="Fertig" />
       <TextField fx:id="txtStart" layoutX="69.0" layoutY="335.0" />
       <TextField fx:id="txtEnde" layoutX="69.0" layoutY="381.0" />
       <TextField fx:id="txtStunden" layoutX="363.0" layoutY="381.0" />

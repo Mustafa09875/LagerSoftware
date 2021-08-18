@@ -101,8 +101,6 @@ public class VermietungViewController implements Initializable {
         int index = lwTechniker.getSelectionModel().getSelectedIndex();
         App.setSelectedTechniker(App.getTechniker().get(index));
         lbSelectedTechniker.setText(App.getSelectedTechniker().getNachname());
-        techniker.add(App.getSelectedTechniker());
-        System.out.println("Alle Techniker: "+techniker);
     }
 
     @FXML
@@ -111,19 +109,20 @@ public class VermietungViewController implements Initializable {
         int index = lwTechnik.getSelectionModel().getSelectedIndex();
         App.setSelectedTechnik(App.getTechnik().get(index));
         lbSelectedTechnik.setText(App.getSelectedTechnik().getName());
-        int anzahl = Integer.parseInt(txtAnzahl.getText());
-        technik.put(App.getSelectedTechnik(), anzahl);
-        System.out.println("Gewählte Technik: "+technik);
     }
 
 
     @FXML
     private void btnAddTechniker(ActionEvent event) {
-        
+        techniker.add(App.getSelectedTechniker());
+        System.out.println("Alle Techniker: "+techniker);
     }
 
     @FXML
     private void btnAddTechnik(ActionEvent event) {
+        int anzahl = Integer.parseInt(txtAnzahl.getText());
+        technik.put(App.getSelectedTechnik(), anzahl);
+        System.out.println("Gewählte Technik: "+technik);
     }
 
     @FXML
@@ -133,6 +132,7 @@ public class VermietungViewController implements Initializable {
         
         //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText()));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
+        App.getVermietungen().get(App.getVermietungen().size()-1).setObjekte(technik);
     }
     
 }
