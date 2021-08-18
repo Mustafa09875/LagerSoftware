@@ -76,14 +76,14 @@
                <content>
                   <AnchorPane fx:id="BtnTechnikAnpassen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="616.0">
                      <children>
-                        <ListView fx:id="LWTechnikAnpassen" onMouseClicked="#LWTechnikerSelect" prefHeight="425.0" prefWidth="616.0" />
+                        <ListView fx:id="LWTechnikAnpassen" onMouseClicked="#LWTechnikerSelect" prefHeight="343.0" prefWidth="616.0" />
                         <Button layoutX="18.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLWTechnikerBearbeiten" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Bearbeiten">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
                            </styleClass>
                         </Button>
-                        <Button layoutX="470.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLwTechnikerLöschen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Löschen">
+                        <Button layoutX="482.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLwTechnikerLöschen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Löschen">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />

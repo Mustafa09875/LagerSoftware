@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -38,6 +39,8 @@ public class KundenSpeichernViewController implements Initializable {
     private TextField TxtFGeschaeftsKundeAdresse;
     @FXML
     private TextField TxtFGeschaeftsKundeFirma;
+    @FXML
+    private ListView<?> LWKundenAnpassen;
 
     /**
      * Initializes the controller class.
@@ -61,6 +64,20 @@ public class KundenSpeichernViewController implements Initializable {
     private void BtnGeschaeftsKundeSpeichern(ActionEvent event) {
         GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel(TxtFGeschaeftsKundeVorname.getText(), TxtFGeschaeftsKundeNachname.getText(), TxtFGeschaeftsKundeAdresse.getText(), TxtFGeschaeftsKundeFirma.getText());
     }
+
+
+    @FXML
+    private void LWTechnikerSelect(MouseEvent event) {
+    }
+
+    @FXML
+    private void BtnLwKundenLöschen(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnLWKundenBearbeiten(ActionEvent event) {
+    }
+
 
     
 }
