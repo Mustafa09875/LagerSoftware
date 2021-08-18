@@ -34,7 +34,29 @@ public  class Vermietung {
         this.stunden = stunden;
     }
 
-    
+    public ArrayList<Techniker> getTechniker() {
+        return techniker;
+    }
+
+    public void setTechniker(ArrayList<Techniker> techniker) {
+        this.techniker = techniker;
+    }
+
+    public int getKosten() {
+        return kosten;
+    }
+
+    public void setKosten(int kosten) {
+        this.kosten = kosten;
+    }
+
+    public int getStunden() {
+        return stunden;
+    }
+
+    public void setStunden(int stunden) {
+        this.stunden = stunden;
+    }
 
 
     public String getStart() {
@@ -62,10 +84,6 @@ public  class Vermietung {
     }
     
     
-
-   
-    
-
 
     public Kunde getKunde() {
         return kunde;
