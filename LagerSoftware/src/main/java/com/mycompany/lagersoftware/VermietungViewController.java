@@ -8,6 +8,7 @@ package com.mycompany.lagersoftware;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map.Entry;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -137,6 +138,18 @@ public class VermietungViewController implements Initializable {
         for(Techniker t: App.getVermietungen().get(App.getVermietungen().size()-1).getTechniker()){
             preis = preis + App.getVermietungen().get(App.getVermietungen().size()-1).getStunden()*t.getStundensatz();
         }
+        
+        for(Entry<Technik, Integer> entry :App.getVermietungen().get(App.getVermietungen().size()-1).getObjekte().entrySet()){
+            System.out.println("Anzahl: " +entry.getValue());
+            preis = preis + entry.getValue()* entry.getKey().getMietPreiproStunde();
+        }
+        
+        App.getVermietungen().get(App.getVermietungen().size()-1).setKosten(preis);
+        
+        String kosten = String.valueOf(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten());
+        lbPreis.setText(kosten);
+        
+        System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten()+"<----Kosten/ Kunde/in---> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
     }
     
 }
