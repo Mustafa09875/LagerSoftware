@@ -133,6 +133,26 @@ public class TechnikAktualisierenViewController implements Initializable {
              App.setSelectedPult((Pult) App.getSelectedTechnik());
              
              String sPreis = String.valueOf(App.getSelectedPult().getMietPreiproStunde());
+             String sKanaele = String.valueOf(App.getSelectedPult().getKanaele());
+             
+             TxtFPultName.setText(App.getSelectedPult().getName());
+             TxtFPultBeschreibung.setText(App.getSelectedPult().getBeschreibung());
+             TxtFPultMietpreis.setText(sPreis);
+             TxtFPultKanele.setText(sKanaele);
+         
+         } else if(App.getSelectedTechnik().getClass().equals(t1)){
+             App.setSelectedTraverse((Traversen) App.getSelectedTechnik());
+             
+              String sPreis = String.valueOf(App.getSelectedTraverse().getMietPreiproStunde());
+              String sLaenge = String.valueOf(App.getSelectedTraverse().getLaenge());
+             
+             TxtFTraversName.setText(App.getSelectedTraverse().getName());
+             TxtFTraversBeschreibung.setText(App.getSelectedTraverse().getName());
+             TxtFTraversMietpreis.setText(sPreis);
+             TxtFTraversArt.setText(App.getSelectedTraverse().getArt());
+             TxtFTraversLaenge.setText(sLaenge);
+             
+             
          }
     }
        
