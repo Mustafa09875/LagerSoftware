@@ -10,11 +10,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -47,6 +44,7 @@ public class KundenSpeichernViewController implements Initializable {
     }    
 
     @FXML
+<<<<<<< HEAD
     private void BtnTechnikerSpeichern(ActionEvent event) {
     }
 
@@ -64,5 +62,15 @@ public class KundenSpeichernViewController implements Initializable {
 
 
 
+=======
+    private void BtnPrivatKundeSpeichern(ActionEvent event) {
+        PrivateKundeModel pk1 = new PrivateKundeModel(TxtFPrivatKundeVorname.getText(), TxtFPrivatKundeNachname.getText(), TxtFPrivatKundeAdresse.getText());
+    }
+
+    @FXML
+    private void BtnGeschaeftsKundeSpeichern(ActionEvent event) {
+        GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel(TxtFGeschaeftsKundeVorname.getText(), TxtFGeschaeftsKundeNachname.getText(), TxtFGeschaeftsKundeAdresse.getText(), TxtFGeschaeftsKundeFirma.getText());
+    }
+>>>>>>> e41996443555caaaa233b0e59208841538bcf9c2
     
 }

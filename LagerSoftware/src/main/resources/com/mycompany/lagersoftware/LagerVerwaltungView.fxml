@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="AnchorPaneTechnikAnpassen" prefHeight="475.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.LagerVerwaltungViewController">
+<AnchorPane id="AnchorPane" fx:id="AnchorPaneTechnikAnpassen" prefHeight="475.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.LagerVerwaltungViewController">
     <stylesheets>
         <URL value="@lagerverwaltungview.css" />
     </stylesheets>
@@ -108,7 +108,7 @@
       </AnchorPane>
       <TabPane fx:id="TabPane" layoutX="1.0" layoutY="53.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@lagerverwaltungview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab style="-fx-Cursor: Hand;" text="Box">
+            <Tab fx:id="tabBox" style="-fx-Cursor: Hand;" text="Box">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
@@ -151,7 +151,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab style="-fx-Cursor: Hand;" text="Kabel">
+            <Tab fx:id="tabKabel" style="-fx-Cursor: Hand;" text="Kabel">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>

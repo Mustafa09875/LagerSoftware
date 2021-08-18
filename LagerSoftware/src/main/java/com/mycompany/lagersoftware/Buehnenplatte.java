@@ -35,7 +35,7 @@ public class Buehnenplatte extends Technik{
     public String datenAusgeben() {
         String sPreis = String.valueOf(this.getMietPreiproStunde());
         
-        return "Bühnenplatte" + " - " + this.getName()+ " - "  + sPreis+ " - "  + this.getBeschreibung()+ " - "  + this.getMaBe() ;
+        return this.getClass() + " - " + this.getName()+ " - "  + sPreis+ " - "  + this.getBeschreibung()+ " - "  + this.getMaBe() ;
     }
     
     
