@@ -1,6 +1,7 @@
 com\mycompany\lagersoftware\TechnikAktualisierenViewController.class
 com\mycompany\lagersoftware\Kabel.class
 com\mycompany\lagersoftware\PrivateKundeModel.class
+com\mycompany\lagersoftware\TechnikerSpeichernViewController.class
 com\mycompany\lagersoftware\Pult.class
 com\mycompany\lagersoftware\GeschaeftsKundeModel.class
 com\mycompany\lagersoftware\Kunde.class
@@ -12,6 +13,7 @@ com\mycompany\lagersoftware\Techniker.class
 com\mycompany\lagersoftware\Traversen.class
 com\mycompany\lagersoftware\Buehnenplatte.class
 com\mycompany\lagersoftware\MainViewController.class
+com\mycompany\lagersoftware\KundenSpeichernViewController.class
 com\mycompany\lagersoftware\Technik.class
 module-info.class
 com\mycompany\lagersoftware\LagerVerwaltungViewController.class

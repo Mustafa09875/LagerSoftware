@@ -117,7 +117,7 @@ public class TechnikAktualisierenViewController implements Initializable {
             TxtFKabelName.setText(App.getSelectedKabel().getName());
             TxtFKabelBeschreibung.setText(App.getSelectedKabel().getBeschreibung());
             TxtFKabelMietpreis.setText(sPreis);
-            TxtFKabelName.setText(sLaenge);
+            TxtFKabelLaenge.setText(sLaenge);
                     
         } else if(App.getSelectedTechnik().getClass().equals(m1.getClass())){
             App.setSelectedMonitor((Monitor) App.getSelectedTechnik());
@@ -141,7 +141,7 @@ public class TechnikAktualisierenViewController implements Initializable {
              TxtFPultMietpreis.setText(sPreis);
              TxtFPultKanele.setText(sKanaele);
          
-         } else if(App.getSelectedTechnik().getClass().equals(t1)){
+         } else if(App.getSelectedTechnik().getClass().equals(t1.getClass())){
              App.setSelectedTraverse((Traversen) App.getSelectedTechnik());
              
               String sPreis = String.valueOf(App.getSelectedTraverse().getMietPreiproStunde());
