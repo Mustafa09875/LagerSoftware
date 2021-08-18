@@ -149,7 +149,7 @@ public class VermietungViewController implements Initializable {
         String kosten = String.valueOf(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten());
         lbPreis.setText(kosten);
         
-        System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten()+"<----Kosten/ Kunde/in---> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
+        System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten()+"<---- Kosten/ Kunde/in ----> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
     }
     
 }
