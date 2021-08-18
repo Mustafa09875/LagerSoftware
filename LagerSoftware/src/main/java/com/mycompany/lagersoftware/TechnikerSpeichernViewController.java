@@ -5,16 +5,19 @@
  */
 package com.mycompany.lagersoftware;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
@@ -37,12 +40,16 @@ public class TechnikerSpeichernViewController implements Initializable {
     private AnchorPane BtnTechnikAnpassen;
     @FXML
     private ListView<String> LWTechnikAnpassen;
+    @FXML
+    private BorderPane BorderPaneTechniker;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        BorderPaneTechniker.setVisible(false);
+        
         for(Techniker t: App.getTechniker()){
         LWTechnikAnpassen.getItems().add(t.datenAusgeben());
       }
@@ -64,7 +71,10 @@ public class TechnikerSpeichernViewController implements Initializable {
     
 
     @FXML
-    private void BtnLWTechnikerBearbeiten(ActionEvent event) {
+    private void BtnLWTechnikerBearbeiten(ActionEvent event) throws IOException {
+        BorderPaneTechniker.setVisible(true);
+         AnchorPane pane = FXMLLoader.load(getClass().getResource("TechnikerAktualisierenView.fxml"));
+        BorderPaneTechniker.setCenter(pane);
         
     
     }

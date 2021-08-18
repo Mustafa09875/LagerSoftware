@@ -6,16 +6,19 @@
 package com.mycompany.lagersoftware;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
@@ -42,6 +45,8 @@ public class KundenSpeichernViewController implements Initializable {
     private TextField TxtFGeschaeftsKundeFirma;
     @FXML
     private ListView<String> LWKundenAnpassen;
+    @FXML
+    private BorderPane BorderPaneKundeaktualisieren;
 
     /**
      * Initializes the controller class.
@@ -84,8 +89,13 @@ public class KundenSpeichernViewController implements Initializable {
     }
 
     @FXML
-    private void BtnLWKundenBearbeiten(ActionEvent event) {
+    private void BtnLWKundenBearbeiten(ActionEvent event) throws IOException {
+      BorderPaneKundeaktualisieren.setVisible(true);
+         AnchorPane pane = FXMLLoader.load(getClass().getResource("KundenAktualisierenView.fxml"));
+        BorderPaneKundeaktualisieren.setCenter(pane);        
     }
+
+
 
 
     

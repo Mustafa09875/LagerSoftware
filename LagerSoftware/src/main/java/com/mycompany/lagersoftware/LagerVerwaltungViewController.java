@@ -264,6 +264,12 @@ public class LagerVerwaltungViewController implements Initializable {
         App.getTechnik().remove(index);
         AnchorPaneTechnikAnpassen.setVisible(false);
         AnchorPaneTechnikAnpassen.setVisible(true);
+        
+          LWTechnikAnpassen.getItems().clear();
+        for(Technik t : App.getTechnik()){
+            LWTechnikAnpassen.getItems().add(t.datenAusgeben());
+            
+        }
 
     }
 

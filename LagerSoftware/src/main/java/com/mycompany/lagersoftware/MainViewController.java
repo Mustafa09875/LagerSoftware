@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -66,10 +67,13 @@ public class MainViewController implements Initializable {
         CloseBtn.setOnMouseClicked(event -> {
             Stage stage = (Stage) CloseBtn.getScene().getWindow();
     stage.close();
+                CloseBtn.setCursor(Cursor.HAND);
         });
         CloseBtn.setOnMouseEntered((tt) -> {
             CloseBtn.setFitHeight(24);
             CloseBtn.setFitWidth(24);
+                            CloseBtn.setCursor(Cursor.HAND);
+
         });
         CloseBtn.setOnMouseExited((ttt) -> {
             CloseBtn.setFitHeight(20);
@@ -80,10 +84,14 @@ public class MainViewController implements Initializable {
         MinBtn.setOnMousePressed((ss) -> {
             Stage s = (Stage) ((Node) ss.getSource()).getScene().getWindow();
             s.setIconified(true);
+                            MinBtn.setCursor(Cursor.HAND);
+
         });
         MinBtn.setOnMouseEntered((sss) -> {
             MinBtn.setFitHeight(24);
             MinBtn.setFitWidth(24);
+                            MinBtn.setCursor(Cursor.HAND);
+
         });
         MinBtn.setOnMouseExited((ssss) -> {
             MinBtn.setFitHeight(20);
