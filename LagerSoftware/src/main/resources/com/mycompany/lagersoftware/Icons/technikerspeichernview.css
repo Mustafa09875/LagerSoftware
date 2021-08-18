@@ -5,6 +5,31 @@
 .mainFxmlClass {
 
 }
+ 
+ .list-view .list-cell:hover {
+-fx-background-color: #D1D5F7;
+    -fx-text-fill: white;
+ -fx-border-color: #E3E3E3;
+}
+
+.list-view:focused, .list-view:selected {
+  
+    -fx-border-color: #E3E3E3;
+}
+
+.list-view {
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #D1D5F7;
+    -fx-text-fill: white;
+    -fx-border-color: #D1D5F7;
+     -fx-border-color: #E3E3E3;
+}
+
+
 
 .buttonmenu{
     -fx-background-color: #E3E3E3;

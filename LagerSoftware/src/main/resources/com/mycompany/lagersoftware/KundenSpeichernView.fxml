@@ -116,7 +116,12 @@
                               <String fx:value="btnsave" />
                            </styleClass>
                         </Button>
-                        <ListView fx:id="LWKundenAnpassen" onMouseClicked="#LWTechnikerSelect" prefHeight="343.0" prefWidth="616.0" />
+                        <ListView fx:id="LWKundenAnpassen" layoutX="-1.0" onMouseClicked="#LWTechnikerSelect" prefHeight="343.0" prefWidth="616.0" stylesheets="@Icons/kundenspeichernview.css">
+                           <styleClass>
+                              <String fx:value="list-cell" />
+                              <String fx:value="list-view" />
+                           </styleClass>
+                        </ListView>
                      </children>
                   </AnchorPane>
                </content>
