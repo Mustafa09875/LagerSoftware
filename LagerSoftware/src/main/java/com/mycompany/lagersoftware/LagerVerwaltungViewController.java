@@ -211,7 +211,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void LWTechnikAnspassenSelect(MouseEvent event) throws IOException {
                   int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
-        App.setSelectedTechnik(getTechnik().get(index));
+        App.setSelectedTechnik(App.getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
  
                 
@@ -232,6 +232,10 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnLwLöschen(ActionEvent event) {
         int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.getTechnik().remove(index);
+                TabPane.setVisible(false);
+                TabPane.setVisible(true);
+
+        
     }
     
 }
