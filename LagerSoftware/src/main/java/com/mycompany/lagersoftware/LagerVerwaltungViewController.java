@@ -233,7 +233,7 @@ public class LagerVerwaltungViewController implements Initializable {
 
         BorderPaneTechnikSelect.setCenter(pane);
         
-        FXMLLoader loader = new FXMLLoader.getClass.getResource("TechnikAktualisierenView.fxml");
+        /*FXMLLoader loader = new FXMLLoader.getClass.getResource("TechnikAktualisierenView.fxml");
         Parent root = (Parent) loader.load();
         MainViewController datacon = loader.getController();
         
@@ -241,8 +241,8 @@ public class LagerVerwaltungViewController implements Initializable {
         SingleSelectionModel<Tab> selectionModel = TabPane.getSelectionModel();
         
         selectionModel.select(1);
-
-        //TabPane.getSelectionModel().select(tabKabel);
+        
+        //TabPane.getSelectionModel().select(tabKabel);*/
         
         
 
