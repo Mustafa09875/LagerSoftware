@@ -82,8 +82,34 @@ public class TechnikAktualisierenViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        Boxen bo1 = new Boxen("a", 1, "a", 1);
+        Buehnenplatte b1 = new Buehnenplatte("a", 1, "a", "1");
+        Monitor m1 = new Monitor("a", 1, "a", 1);
+        Kabel k1 = new Kabel("a", 1, "a", 1);
+        Pult p1 = new Pult("a", 1, "a", 1);
+        Traversen t1 = new Traversen("a", 1, "a", "1" ,1);
+        if(App.getSelectedTechnik().getClass() == bo1.getClass()){
+            App.setSelectedBox((Boxen)App.getSelectedTechnik());
+            
+            String sGewicht = String.valueOf(App.getSelectedBox().getGewicht());
+            String sPreis = String.valueOf(App.getSelectedBox().getMietPreiproStunde());
+            
+            TxtFBoxenName.setText(App.getSelectedBox().getName());
+            TxtFBoxenBeschreibung.setText(App.getSelectedBox().getBeschreibung());
+            TxtFBoxenGewicht.setText(sGewicht);
+            TxtFBoxenMietpreis.setText(sPreis );
+        } else if(App.getSelectedTechnik().getClass().equals(b1.getClass())){
+            App.setSelectedPlatte((Buehnenplatte)App.getSelectedTechnik());
+            
+            String sMasse = String.valueOf(App.getSelectedPlatte().getMaBe());
+            String sPreis = String.valueOf(App.getSelectedPlatte().getMietPreiproStunde());
+            TxtFPlatteName.setText(App.getSelectedPlatte().getName());
+            TxtFPlatteBeschreibung.setText(App.getSelectedPlatte().getName());
+            TxtFPlatteMasse.setText(sMasse);
+            TxtFPlatteMietpreis.setText(sPreis);
+        }
+        }
+       
 
     @FXML
     private void BtnSaveBoxen(ActionEvent event) {

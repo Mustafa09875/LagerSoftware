@@ -24,6 +24,76 @@ public class App extends Application {
     private static Kunde selectedKunde;
     private static Techniker selectedTechniker;
     private static Technik selectedTechnik;
+    private static Boxen selectedBox;
+    private static Buehnenplatte selectedPlatte;
+    private static Kabel selectedKabel;
+    private static Monitor selectedMonitor;
+    private static Pult selectedPult;
+    private static Traversen selectedTraverse;
+
+    public static Kunde getSelectedKunde() {
+        return selectedKunde;
+    }
+
+    public static void setSelectedKunde(Kunde selectedKunde) {
+        App.selectedKunde = selectedKunde;
+    }
+
+    public static Techniker getSelectedTechniker() {
+        return selectedTechniker;
+    }
+
+    public static void setSelectedTechniker(Techniker selectedTechniker) {
+        App.selectedTechniker = selectedTechniker;
+    }
+
+    public static Boxen getSelectedBox() {
+        return selectedBox;
+    }
+
+    public static void setSelectedBox(Boxen selectedBox) {
+        App.selectedBox = selectedBox;
+    }
+
+    public static Buehnenplatte getSelectedPlatte() {
+        return selectedPlatte;
+    }
+
+    public static void setSelectedPlatte(Buehnenplatte selectedPlatte) {
+        App.selectedPlatte = selectedPlatte;
+    }
+
+    public static Kabel getSelectedKabel() {
+        return selectedKabel;
+    }
+
+    public static void setSelectedKabel(Kabel selectedKabel) {
+        App.selectedKabel = selectedKabel;
+    }
+
+    public static Monitor getSelectedMonitor() {
+        return selectedMonitor;
+    }
+
+    public static void setSelectedMonitor(Monitor selectedMonitor) {
+        App.selectedMonitor = selectedMonitor;
+    }
+
+    public static Pult getSelectedPult() {
+        return selectedPult;
+    }
+
+    public static void setSelectedPult(Pult selectedPult) {
+        App.selectedPult = selectedPult;
+    }
+
+    public static Traversen getSelectedTraverse() {
+        return selectedTraverse;
+    }
+
+    public static void setSelectedTraverse(Traversen selectedTraverse) {
+        App.selectedTraverse = selectedTraverse;
+    }
 
     public static Technik getSelectedTechnik() {
         return selectedTechnik;
