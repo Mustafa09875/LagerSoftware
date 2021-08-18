@@ -26,19 +26,17 @@ public class KundenSpeichernViewController implements Initializable {
     @FXML
     private TabPane TabPane;
     @FXML
-    private TextField TxtFPrivatKundeVorname;
+    private TextField TxtFTechnikerVorname;
     @FXML
-    private TextField TxtFPrivatKundeNachname;
+    private TextField TxtFTechnikerNachname;
     @FXML
-    private TextField TxtFPrivatKundeAdresse;
+    private TextField TxtFTechnikerStundensatz;
     @FXML
-    private TextField TxtFGeschaeftsKundeVorname;
+    private TextField TxtFTechnikerBeschreibung;
     @FXML
-    private TextField TxtFGeschaeftsKundeNachname;
+    private AnchorPane BtnTechnikAnpassen;
     @FXML
-    private TextField TxtFGeschaeftsKundeAdresse;
-    @FXML
-    private TextField TxtFGeschaeftsKundeFirma;
+    private ListView<?> LWTechnikAnpassen;
 
     /**
      * Initializes the controller class.
@@ -49,12 +47,22 @@ public class KundenSpeichernViewController implements Initializable {
     }    
 
     @FXML
-    private void BtnPrivatKundeSpeichern(ActionEvent event) {
+    private void BtnTechnikerSpeichern(ActionEvent event) {
     }
 
     @FXML
-    private void BtnGeschaeftsKundeSpeichern(ActionEvent event) {
+    private void LWTechnikerSelect(MouseEvent event) {
     }
+
+    @FXML
+    private void BtnLWTechnikerBearbeiten(ActionEvent event) {
+    }
+
+    @FXML
+    private void BtnLwTechnikerLöschen(ActionEvent event) {
+    }
+
+
 
     
 }

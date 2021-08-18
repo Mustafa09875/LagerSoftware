@@ -56,8 +56,6 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private TextField TxtFTraversMietpreis;
     @FXML
-    private TextField TxtFTraversGewicht;
-    @FXML
     private TextField TxtFTraversArt;
     @FXML
     private TextField TxtFTraversLaenge;
@@ -83,8 +81,6 @@ public class LagerVerwaltungViewController implements Initializable {
     private TextField TxtFMonitorBeschreibung;
     @FXML
     private TextField TxtFMonitorMietpreis;
-    @FXML
-    private TextField TxtFMonitorMasse;
     @FXML
     private TextField TxtFMonitorZollangabe;
     @FXML

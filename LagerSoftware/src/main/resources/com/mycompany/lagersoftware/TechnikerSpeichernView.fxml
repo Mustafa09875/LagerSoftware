@@ -18,19 +18,19 @@
       <URL value="@/com/mycompany/lagersoftware/Icons/kundenspeichernview.css" />
    </stylesheets>
    <children>
-      <TabPane fx:id="TabPane" layoutX="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/kundenspeichernview.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="TabPane" layoutX="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/technikerspeichernview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab style="-fx-Cursor: Hand;" text="                                  Techniker">
+            <Tab style="-fx-Cursor: Hand;" styleClass="technikaktualisierenview.css" text="Techniker">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
-                        <TextField fx:id="TxtFTechnikerVorname" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Vorname" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@kundenspeichernview.css" />
+                        <TextField fx:id="TxtFTechnikerVorname" layoutX="140.0" layoutY="67.0" prefHeight="27.0" prefWidth="210.0" promptText="Vorname" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="76.0" layoutY="63.0" prefHeight="33.0" prefWidth="51.0" text="Vorname:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTechnikerNachname" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Nachname" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
+                        <TextField fx:id="TxtFTechnikerNachname" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Nachname" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                         <Label layoutX="69.0" layoutY="110.0" prefHeight="33.0" prefWidth="60.0" text="Nachname:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -41,8 +41,8 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTechnikerStundensatz" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Stundensatz" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnTechnikerSpeichern" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@kundenspeichernview.css" text="Speichern">
+                        <TextField fx:id="TxtFTechnikerStundensatz" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Stundensatz" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
+                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnTechnikerSpeichern" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Speichern">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -58,12 +58,12 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFTechnikerBeschreibung" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
+                        <TextField fx:id="TxtFTechnikerBeschreibung" layoutX="140.0" layoutY="209.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikaktualisierenview.css" />
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab style="-fx-Cursor: Hand;" text="                                  Techniker anzeigen">
+            <Tab style="-fx-Cursor: Hand;" text="Techniker anzeigen">
                <content>
                   <ListView prefHeight="200.0" prefWidth="200.0" />
                </content>
@@ -77,13 +77,13 @@
                   <AnchorPane fx:id="BtnTechnikAnpassen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="616.0">
                      <children>
                         <ListView fx:id="LWTechnikAnpassen" onMouseClicked="#LWTechnikerSelect" prefHeight="425.0" prefWidth="616.0" />
-                        <Button layoutX="18.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLWTechnikerBearbeiten" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Bearbeiten">
+                        <Button layoutX="18.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLWTechnikerBearbeiten" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Bearbeiten">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
                            </styleClass>
                         </Button>
-                        <Button layoutX="470.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLwTechnikerLöschen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@lagerverwaltungview.css" text="Löschen">
+                        <Button layoutX="470.0" layoutY="352.0" mnemonicParsing="false" onAction="#BtnLwTechnikerLöschen" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikaktualisierenview.css" text="Löschen">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
