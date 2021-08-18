@@ -210,7 +210,7 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void LWTechnikAnspassenSelect(MouseEvent event) throws IOException {
-                  int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+        int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.setSelectedTechnik(App.getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
  
@@ -222,7 +222,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private void BtnLWBearbeiten(ActionEvent event) throws IOException {
     
         AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
-                BorderPaneTechnikSelect.setCenter(pane);
+        BorderPaneTechnikSelect.setCenter(pane);
     }
 
     @FXML

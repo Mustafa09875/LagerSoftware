@@ -105,6 +105,6 @@
       <Label layoutX="279.0" layoutY="385.0" text="Stunden:" />
       <Label layoutX="279.0" layoutY="340.0" text="Jetztiger preis:" />
       <Label fx:id="lbPreis" layoutX="368.0" layoutY="340.0" text="0€" />
-      <TextField fx:id="tfAnzahl" layoutX="491.0" layoutY="295.0" prefHeight="26.0" prefWidth="57.0" promptText="Anzahl" />
+      <TextField fx:id="txtAnzahl" layoutX="491.0" layoutY="295.0" prefHeight="26.0" prefWidth="57.0" promptText="Anzahl" />
    </children>
 </AnchorPane>
