@@ -98,7 +98,10 @@ public class LagerVerwaltungViewController implements Initializable {
     private static ArrayList<Technik> technikarraylist;
     @FXML
     private BorderPane BorderPaneTechnikSelect;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     @FXML
     private AnchorPane AnchorPaneAktualisierungsView;
 
@@ -141,18 +144,24 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void BtnTechnikanlegen(ActionEvent event) {
         TabPane.setVisible(true);
+        BtnTechnikAnpassen.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
         
     }
 
     @FXML
     private void BtnTechnikAnpassen(ActionEvent event) {
-        AnchorPaneTechnikAnpassen.setVisible(true);
-        TabPane.setVisible(false);
+     TabPane.setVisible(false);
+     AnchorPaneAktualisierungsView.setVisible(false);
+     BtnTechnikAnpassen.setVisible(true);
       
     }
 
     @FXML
     private void BtnTechnikRegale(ActionEvent event) {
+        AnchorPaneAktualisierungsView.setVisible(false);
+        TabPane.setVisible(false);
+        BtnTechnikAnpassen.setVisible(false);
     }
 
     @FXML
@@ -235,6 +244,8 @@ public class LagerVerwaltungViewController implements Initializable {
     
    
                     BorderPaneTechnikSelect.setCenter(pane);
+                    
+                  
       
 
 
