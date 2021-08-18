@@ -154,13 +154,15 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnTechnikRegale(ActionEvent event) {
-        AnchorPaneAktualisierungsView.setVisible(false);
-        TabPane.setVisible(false);
-        BtnTechnikAnpassen.setVisible(false);
+      
     }
 
     @FXML
     private void BtnSaveBoxen(ActionEvent event) {
+           TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+        
         double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
         double sGewicht = Double.parseDouble(TxtFBoxenGewicht.getText());
         Boxen b1 = new Boxen(TxtFBoxenName.getText(), sPreis, TxtFBoxenBeschreibung.getText(), sGewicht);
@@ -177,6 +179,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSaveTravers(ActionEvent event) {
+           TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+        
         double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
         double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
         Traversen t1 = new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(), TxtFTraversArt.getText(), sLaenge);
@@ -185,6 +191,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSavePult(ActionEvent event) {
+           TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+        
         double sPreis = Double.parseDouble(TxtFPultMietpreis.getText());
         double sKanal = Double.parseDouble(TxtFPultKanele.getText());
         Pult p1 = new Pult(TxtFPultName.getText(), sPreis, TxtFPultBeschreibung.getText(), sKanal);
@@ -193,6 +203,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSavePlatte(ActionEvent event) {
+           TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+        
         double sPreis = Double.parseDouble(TxtFPlatteMietpreis.getText());
 
         Buehnenplatte pl1 = new Buehnenplatte(TxtFPlatteName.getText(), sPreis, TxtFPlatteBeschreibung.getText(), TxtFPlatteMasse.getText());
@@ -201,6 +215,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSaveMonitor(ActionEvent event) {
+           TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+        
         double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
         double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
         Monitor m1 = new Monitor(TxtFMonitorName.getText(), sPreis, TxtFMonitorBeschreibung.getText(), sZoll);

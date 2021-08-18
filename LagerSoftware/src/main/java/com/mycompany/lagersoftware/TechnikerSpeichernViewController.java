@@ -65,6 +65,7 @@ public class TechnikerSpeichernViewController implements Initializable {
 
     @FXML
     private void BtnLWTechnikerBearbeiten(ActionEvent event) {
+        
     
     }
 

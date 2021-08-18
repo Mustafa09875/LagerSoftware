@@ -20,7 +20,7 @@
    <children>
       <TabPane fx:id="TabPane" layoutX="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/technikerspeichernview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab style="-fx-Cursor: Hand;" styleClass="technikaktualisierenview.css" text="Techniker">
+            <Tab style="-fx-Cursor: Hand;" styleClass="technikaktualisierenview.css" text="                                     Techniker">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
@@ -63,7 +63,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab style="-fx-Cursor: Hand;" text="Techniker anzeigen">
+            <Tab style="-fx-Cursor: Hand;" text="                              Techniker anzeigen">
                <content>
                   <ListView prefHeight="200.0" prefWidth="200.0" />
                </content>
