@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="600.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikAktualisierenViewController">
+<AnchorPane id="AnchorPane" fx:id="AnchorPaneTabPane" prefHeight="411.0" prefWidth="600.0" style="-fx-background-color: #E3E3E3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikAktualisierenViewController">
     <stylesheets>
         <URL value="@technikaktualisierenview.css" />
     </stylesheets>

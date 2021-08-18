@@ -151,9 +151,7 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnTechnikRegale(ActionEvent event) {
-        AnchorPaneAktualisierungsView.setVisible(false);
-        TabPane.setVisible(false);
-        BtnTechnikAnpassen.setVisible(false);
+   
     }
 
     @FXML
