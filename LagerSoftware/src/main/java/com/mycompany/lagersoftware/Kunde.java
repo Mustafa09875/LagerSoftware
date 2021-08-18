@@ -11,7 +11,7 @@ package com.mycompany.lagersoftware;
  *
  * @author Test
  */
-public class Kunde extends Person{
+public abstract class Kunde extends Person{
     private String adresse;
    
     public Kunde(String vorname, String nachname, String adresse) {
@@ -27,5 +27,7 @@ public class Kunde extends Person{
         this.adresse = adresse;
     }
     
+    public abstract String datenAusgeben();
+        
     
 }

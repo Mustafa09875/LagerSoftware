@@ -25,6 +25,11 @@ public class GeschaeftsKundeModel extends Kunde{
     public void setFirma(String firma) {
         this.firma = firma;
     }
+
+    @Override
+    public String datenAusgeben() {
+        return "Geschäftskunde - " + this.getVorname() + " - " + this.getNachname() + " - " + this.getAdresse() + " - " + this.getFirma();
+    }
     
     
 }

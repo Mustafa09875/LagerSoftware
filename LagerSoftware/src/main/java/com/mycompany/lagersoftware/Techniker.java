@@ -37,6 +37,10 @@ public class Techniker extends Person{
         this.Beschreibung = Beschreibung;
     }
    
+    public String datenAusgeben(){
+        String sLohn = String.valueOf(this.getStundensatz());
+        return this.getVorname() + " - " + this.getNachname() + " - " + this.getBeschreibung() + " - " + sLohn + "€";
+    }
     
     
 }
