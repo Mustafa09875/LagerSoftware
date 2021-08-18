@@ -134,7 +134,8 @@
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
-                           </styleClass></Button>
+                           </styleClass>
+                        </Button>
                         <ImageView fitHeight="172.0" fitWidth="172.0" layoutX="395.0" layoutY="102.0" opacity="0.11">
                            <image>
                               <Image url="@Icons/icons8_speaker_40px.png" />
@@ -191,7 +192,8 @@
                         <TextField fx:id="TxtFKabelLaenge" layoutX="140.0" layoutY="210.0" prefHeight="27.0" prefWidth="210.0" promptText="Länge" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@lagerverwaltungview.css" />
                      </children>
                   </AnchorPane>
-               </content></Tab>
+               </content>
+            </Tab>
             <Tab style="-fx-Cursor: Hand;" text="Traversen">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -201,7 +203,8 @@
                               <Image url="@Icons/icons8_work_30px_1.png" />
                            </image>
                         </ImageView>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
                </content>
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
@@ -394,6 +397,10 @@
             </Tab>
          </tabs>
       </TabPane>
-      <BorderPane fx:id="BorderPaneTechnikSelect" layoutX="2.0" layoutY="51.0" prefHeight="378.0" prefWidth="616.0" />
+      <AnchorPane fx:id="AnchorPaneAktualisierungsView" layoutX="2.0" layoutY="51.0" prefHeight="378.0" prefWidth="616.0">
+         <children>
+            <BorderPane fx:id="BorderPaneTechnikSelect" prefHeight="378.0" prefWidth="616.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

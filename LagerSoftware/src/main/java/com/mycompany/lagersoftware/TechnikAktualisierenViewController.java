@@ -77,8 +77,6 @@ public class TechnikAktualisierenViewController implements Initializable {
     private TextField TxtFMonitorMasse;
     @FXML
     private TextField TxtFMonitorZollangabe;
-    @FXML
-    private HBox LagerVerwaltungHbox;
 
     /**
      * Initializes the controller class.
@@ -184,21 +182,6 @@ public class TechnikAktualisierenViewController implements Initializable {
     private void BtnSaveMonitor(ActionEvent event) {
     }
 
-    @FXML
-    private void BtnTechnikanlegen(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnTechnikAnpassen(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnTechnikRegale(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnTechnikReload(ActionEvent event) {
-    }
 
     
 }
