@@ -5,6 +5,7 @@
  */
 package com.mycompany.lagersoftware;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -157,28 +158,54 @@ public class TechnikAktualisierenViewController implements Initializable {
     }
        
 
-    @FXML
-    private void BtnSaveBoxen(ActionEvent event) {
+     @FXML
+    private void BtnSaveBoxen(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
+        double sGewicht = Double.parseDouble(TxtFBoxenGewicht.getText());
+        App.setSelectedBox(new Boxen(TxtFBoxenName.getText(), sPreis, TxtFBoxenBeschreibung.getText(), sGewicht));
+        App.setRoot("LagerVerwaltungView");
     }
 
     @FXML
-    private void BtnSaveKabel(ActionEvent event) {
+    private void BtnSaveKabel(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
+        double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
+        App.setSelectedKabel(new Kabel (TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge));
+        App.setRoot("LagerVerwaltungView");
     }
 
     @FXML
-    private void BtnSaveTravers(ActionEvent event) {
+    private void BtnSaveTravers(ActionEvent event) throws IOException {
+        double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
+        double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
+        App.setSelectedTraverse(new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(),TxtFTraversArt.getText(), sLaenge ));
+        App.setRoot("LagerVerwaltungView");
     }
 
     @FXML
-    private void BtnSavePult(ActionEvent event) {
+    private void BtnSavePult(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFPultMietpreis.getText());
+        double sKanal = Double.parseDouble(TxtFPultKanele.getText());
+        App.setSelectedPult(new Pult(TxtFPultName.getText(), sPreis, TxtFPultBeschreibung.getText(), sKanal));
+        App.setRoot("LagerVerwaltungView");
+       
     }
 
     @FXML
-    private void BtnSavePlatte(ActionEvent event) {
+    private void BtnSavePlatte(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFPlatteMietpreis.getText());
+       
+    
+        App.setSelectedPlatte(new Buehnenplatte (TxtFPlatteName.getText(), sPreis, TxtFPlatteBeschreibung.getText(), TxtFPlatteMasse.getText()));
+        App.setRoot("LagerVerwaltungView");
     }
 
     @FXML
-    private void BtnSaveMonitor(ActionEvent event) {
+    private void BtnSaveMonitor(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
+        double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
+        App.setSelectedMonitor(new Monitor (TxtFMonitorName.getText(), sPreis ,TxtFMonitorBeschreibung.getText(), sZoll));
+        App.setRoot("LagerVerwaltungView");
     }
 
     @FXML

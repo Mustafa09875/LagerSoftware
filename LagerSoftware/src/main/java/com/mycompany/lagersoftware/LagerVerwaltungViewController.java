@@ -228,6 +228,7 @@ public class LagerVerwaltungViewController implements Initializable {
          
         AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
                 BorderPaneTechnikSelect.setCenter(pane);
+                App.setRoot("TechnikAktualisierenView");
                 
     }
 
