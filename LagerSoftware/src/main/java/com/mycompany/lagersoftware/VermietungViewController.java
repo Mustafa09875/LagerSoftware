@@ -131,19 +131,22 @@ public class VermietungViewController implements Initializable {
         double stunden = Double.valueOf(txtStunden.getText());
         double preis=0;
         
+        //Kunde, Start/End datum,Techniker und Technik wird hinzugefuegt
         App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),stunden));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
         App.getVermietungen().get(App.getVermietungen().size()-1).setObjekte(technik);
         
+        //Preis anhand des Arbeiters berechnet
         for(Techniker t: App.getVermietungen().get(App.getVermietungen().size()-1).getTechniker()){
             preis = preis + App.getVermietungen().get(App.getVermietungen().size()-1).getStunden()*t.getStundensatz();
         }
         
+        //Preis anhand der gemieteten Technik
         for(Entry<Technik, Integer> entry :App.getVermietungen().get(App.getVermietungen().size()-1).getObjekte().entrySet()){
             System.out.println("Anzahl: " +entry.getValue());
             preis = preis + entry.getValue()* entry.getKey().getMietPreiproStunde();
         }
-        
+        //Preis wird Kosten uebergeben
         App.getVermietungen().get(App.getVermietungen().size()-1).setKosten(preis);
         
         String kosten = String.valueOf(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten());
