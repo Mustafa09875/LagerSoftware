@@ -227,10 +227,13 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnTechnikReload(ActionEvent event) {
-        for (int i = 0; i <= App.getTechnik().size(); i++) {
-            LWTechnikAnpassen.getItems().add(App.getTechnik().get(i).datenAusgeben());
-            App.getTechnik().remove(i);
+        LWTechnikAnpassen.getItems().clear();
+        for(Technik t : App.getTechnik()){
+            LWTechnikAnpassen.getItems().add(t.datenAusgeben());
+            
         }
+        
+        
     }
 
     @FXML
