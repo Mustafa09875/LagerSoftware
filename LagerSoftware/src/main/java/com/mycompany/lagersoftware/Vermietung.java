@@ -23,14 +23,24 @@ public  class Vermietung {
     private String ende;
     private double kosten;
     private double stunden;
+    private double rabatt;
 
     //Todo: Techniker in den Konstruktor adden, damit ich ihn auch in meine Vermietung hinzufügen kann
 
-    public Vermietung(Kunde kunde, String start, String ende, double stunden) {
+    public Vermietung(Kunde kunde, String start, String ende, double stunden, double rabatt) {
         this.kunde = kunde;
         this.start = start;
         this.ende = ende;
         this.stunden = stunden;
+        this.rabatt = rabatt;
+    }
+
+    public double getRabatt() {
+        return rabatt;
+    }
+
+    public void setRabatt(double rabatt) {
+        this.rabatt = rabatt;
     }
 
     public ArrayList<Techniker> getTechniker() {
