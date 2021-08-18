@@ -235,19 +235,6 @@ public class LagerVerwaltungViewController implements Initializable {
         
         TabPane.getSelectionModel().select(tabKabel);
         
-        /*//FXMLLoader loader = new FXMLLoader.getClass.getResource("TechnikAktualisierenView.fxml");
-        Parent root = (Parent) loader.load();
-        MainViewController datacon = loader.getController();
-        
-        
-        SingleSelectionModel<Tab> selectionModel = TabPane.getSelectionModel();
-        
-        selectionModel.select(1);*/
-        
-        //TabPane.getSelectionModel().select(tabKabel);
-        
-        
-
     }
 
     @FXML
