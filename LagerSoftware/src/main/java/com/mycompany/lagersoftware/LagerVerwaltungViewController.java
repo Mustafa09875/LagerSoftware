@@ -117,8 +117,8 @@ public class LagerVerwaltungViewController implements Initializable {
          getTechnik().add(b);
          getTechnik().add(b);
         
-        for(Technik t: getTechnik()){
-            LWTechnikAnpassen.getItems().add(t.getName()+ " - "+t.getMietPreiproStunde()+ " - "+t.getBeschreibung()+ " - "+t.getClass().getSimpleName());
+        for(Technik t: App.getTechnik()){
+            LWTechnikAnpassen.getItems().add(t.datenAusgeben());
         }
         
    }    
@@ -216,7 +216,7 @@ public class LagerVerwaltungViewController implements Initializable {
                   int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
         App.setSelectedTechnik(getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
-     App.setRoot("TechnikAktualisierenView");
+ 
                 
     }
 
@@ -233,7 +233,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnLwLöschen(ActionEvent event) {
+        int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
+        App.getTechnik().remove(index);
     }
-    }
+    
+}
 
 
