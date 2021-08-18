@@ -5,6 +5,7 @@
  */
 package com.mycompany.lagersoftware;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -157,28 +158,76 @@ public class TechnikAktualisierenViewController implements Initializable {
     }
        
 
-    @FXML
-    private void BtnSaveBoxen(ActionEvent event) {
+     @FXML
+    private void BtnSaveBoxen(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
+        double sGewicht = Double.parseDouble(TxtFBoxenGewicht.getText());
+        
+        App.getSelectedBox().setName(TxtFBoxenName.getText());
+        App.getSelectedBox().setBeschreibung(TxtFBoxenBeschreibung.getText());
+        App.getSelectedBox().setGewicht(sGewicht);
+        App.getSelectedBox().setMietPreiproStunde(sPreis);
+        
     }
 
     @FXML
-    private void BtnSaveKabel(ActionEvent event) {
+    private void BtnSaveKabel(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
+        double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
+        
+        App.getSelectedKabel().setName(TxtFKabelName.getText());
+        App.getSelectedKabel().setBeschreibung(TxtFKabelBeschreibung.getText());
+        App.getSelectedKabel().setMietPreiproStunde(sPreis);
+        App.getSelectedKabel().setLaenge(sLaenge);
+        
     }
 
     @FXML
-    private void BtnSaveTravers(ActionEvent event) {
+    private void BtnSaveTravers(ActionEvent event) throws IOException {
+        double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
+        double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
+        
+        App.getSelectedTraverse().setArt(TxtFTraversArt.getText());
+        App.getSelectedTraverse().setLaenge(sLaenge);
+        App.getSelectedTraverse().setBeschreibung(TxtFTraversBeschreibung.getText());
+        App.getSelectedTraverse().setName(TxtFTraversName.getText());
+        App.getSelectedTraverse().setMietPreiproStunde(sPreis);
     }
 
     @FXML
-    private void BtnSavePult(ActionEvent event) {
+    private void BtnSavePult(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFPultMietpreis.getText());
+        double sKanal = Double.parseDouble(TxtFPultKanele.getText());
+        
+        App.getSelectedPult().setName(TxtFPultName.getText());
+        App.getSelectedPult().setKanaele(sKanal);
+        App.getSelectedPult().setMietPreiproStunde(sPreis);
+        App.getSelectedPult().setBeschreibung(TxtFPultBeschreibung.getText());
+        
+        
+       
     }
 
     @FXML
-    private void BtnSavePlatte(ActionEvent event) {
+    private void BtnSavePlatte(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFPlatteMietpreis.getText());
+       
+    
+        App.getSelectedPlatte().setName(TxtFPlatteName.getText());
+        App.getSelectedPlatte().setMietPreiproStunde(sPreis);
+        App.getSelectedPlatte().setBeschreibung(TxtFPlatteBeschreibung.getText());
+        App.getSelectedPlatte().setMaBe(TxtFPlatteMasse.getText());
     }
 
     @FXML
-    private void BtnSaveMonitor(ActionEvent event) {
+    private void BtnSaveMonitor(ActionEvent event) throws IOException {
+        double sPreis = Double.parseDouble(TxtFMonitorMietpreis.getText());
+        double sZoll = Double.parseDouble(TxtFMonitorZollangabe.getText());
+       
+        App.getSelectedMonitor().setName(TxtFMonitorName.getText());
+        App.getSelectedMonitor().setBeschreibung(TxtFMonitorBeschreibung.getText());
+        App.getSelectedMonitor().setMietPreiproStunde(sPreis);
+        App.getSelectedMonitor().setZollangabe(sZoll);
     }
 
 
