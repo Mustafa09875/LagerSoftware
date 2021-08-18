@@ -394,6 +394,10 @@
             </Tab>
          </tabs>
       </TabPane>
-      <BorderPane fx:id="BorderPaneTechnikSelect" layoutX="2.0" layoutY="51.0" prefHeight="378.0" prefWidth="616.0" />
+      <AnchorPane fx:id="AnchorPaneLwAktualisierenView" layoutX="2.0" layoutY="51.0" prefHeight="378.0" prefWidth="616.0">
+         <children>
+            <BorderPane fx:id="BorderPaneTechnikSelect" prefHeight="378.0" prefWidth="616.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

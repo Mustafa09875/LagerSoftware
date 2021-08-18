@@ -98,6 +98,8 @@ public class LagerVerwaltungViewController implements Initializable {
     private static ArrayList<Technik> technikarraylist;
     @FXML
     private BorderPane BorderPaneTechnikSelect;
+    @FXML
+    private AnchorPane AnchorPaneLwAktualisierenView;
     /**
      * Initializes the controller class.
      * @param url
@@ -105,6 +107,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @Override
     
     public void initialize(URL url, ResourceBundle rb) {
+        AnchorPaneLwAktualisierenView.setVisible(false);
         TabPane.setVisible(false);
         AnchorPaneTechnikAnpassen.setVisible(true);
         BorderPaneTechnikSelect.setVisible(false);
@@ -226,7 +229,6 @@ public class LagerVerwaltungViewController implements Initializable {
          TabPane.setVisible(false);
 
         AnchorPaneTechnikAnpassen.setVisible(false);
-        BorderPaneTechnikSelect.setVisible(true);
          
         AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));      
                 BorderPaneTechnikSelect.setCenter(pane);
