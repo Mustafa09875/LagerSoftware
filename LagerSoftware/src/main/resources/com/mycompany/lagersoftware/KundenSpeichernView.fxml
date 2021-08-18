@@ -19,7 +19,7 @@
    <children>
       <TabPane fx:id="TabPane" layoutX="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/kundenspeichernview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab style="-fx-Cursor: Hand;" text="Privatekunde">
+            <Tab style="-fx-Cursor: Hand;" text="                                  Privatekunde">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
@@ -29,12 +29,12 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
+                        <TextField fx:id="TxtFPrivatKundeNachname" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Nachname" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
                         <Label layoutX="69.0" layoutY="110.0" prefHeight="33.0" prefWidth="60.0" text="Nachname:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFPrivatKundeNachname" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
                         <Label layoutX="84.0" layoutY="157.0" prefHeight="33.0" prefWidth="57.0" text="Adresse:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
@@ -56,7 +56,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab style="-fx-Cursor: Hand;" text="Geschäftskunde">
+            <Tab style="-fx-Cursor: Hand;" text="                                  Geschäftskunde">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="606.0" style="-fx-background-color: #E3E3E3;">
                      <children>
@@ -71,7 +71,7 @@
                               <Font name="Javanese Text" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="TxtFGeschaeftsKundeNachname" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
+                        <TextField fx:id="TxtFGeschaeftsKundeNachname" layoutX="140.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" promptText="Nachname" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@kundenspeichernview.css" />
                         <Label layoutX="84.0" layoutY="157.0" prefHeight="33.0" prefWidth="57.0" text="Adresse:" textFill="#515151">
                            <font>
                               <Font name="Javanese Text" size="12.0" />
