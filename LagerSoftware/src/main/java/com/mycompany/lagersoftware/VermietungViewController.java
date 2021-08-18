@@ -127,12 +127,16 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSaveVermietung(ActionEvent event) {
+        double stunden = Double.valueOf(txtStunden.getText());
+        double preis=0;
         
-        
-        
-        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText()));
+        App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),stunden));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
         App.getVermietungen().get(App.getVermietungen().size()-1).setObjekte(technik);
+        
+        for(Techniker t: App.getVermietungen().get(App.getVermietungen().size()-1).getTechniker()){
+            preis = preis + App.getVermietungen().get(App.getVermietungen().size()-1).getStunden()*t.getStundensatz();
+        }
     }
     
 }
