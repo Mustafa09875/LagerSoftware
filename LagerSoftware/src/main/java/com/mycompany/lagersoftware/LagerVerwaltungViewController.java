@@ -13,7 +13,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.ListView;
+import javafx.scene.control.SingleSelectionModel;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -56,8 +59,6 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private TextField TxtFTraversMietpreis;
     @FXML
-    private TextField TxtFTraversGewicht;
-    @FXML
     private TextField TxtFTraversArt;
     @FXML
     private TextField TxtFTraversLaenge;
@@ -84,8 +85,6 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private TextField TxtFMonitorMietpreis;
     @FXML
-    private TextField TxtFMonitorMasse;
-    @FXML
     private TextField TxtFMonitorZollangabe;
     @FXML
     private AnchorPane AnchorPaneTechnikAnpassen;
@@ -101,6 +100,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private AnchorPane AnchorPaneAktualisierungsView;
+    @FXML
+    private Tab tabBox;
+    @FXML
+    private Tab tabKabel;
 
     /**
      * Initializes the controller class.
@@ -230,7 +233,18 @@ public class LagerVerwaltungViewController implements Initializable {
 
         BorderPaneTechnikSelect.setCenter(pane);
         
-        TabPane.getSelectionModel().select(3);
+        FXMLLoader loader = new FXMLLoader.getClass.getResource("TechnikAktualisierenView.fxml");
+        Parent root = (Parent) loader.load();
+        MainViewController datacon = loader.getController();
+        
+        
+        SingleSelectionModel<Tab> selectionModel = TabPane.getSelectionModel();
+        
+        selectionModel.select(1);
+
+        //TabPane.getSelectionModel().select(tabKabel);
+        
+        
 
     }
 
