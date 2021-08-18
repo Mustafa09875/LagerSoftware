@@ -114,12 +114,14 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnAddTechniker(ActionEvent event) {
+        //Gewaehlter Techniker wird gespeichert
         techniker.add(App.getSelectedTechniker());
         System.out.println("Alle Techniker: "+techniker);
     }
 
     @FXML
     private void btnAddTechnik(ActionEvent event) {
+        //Anzahl und Technik wird in Vermietung gespeichert
         int anzahl = Integer.parseInt(txtAnzahl.getText());
         technik.put(App.getSelectedTechnik(), anzahl);
         System.out.println("Gewählte Technik: "+technik);
@@ -127,10 +129,10 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSaveVermietung(ActionEvent event) {
+        double stunden = Double.valueOf(txtStunden.getText());
+        double preis;
         
-        
-        
-        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText()));
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),txtStart.getText(),txtEnde.getText(),,stunden));
         App.getVermietungen().get(App.getVermietungen().size()-1).setTechniker(techniker);
         App.getVermietungen().get(App.getVermietungen().size()-1).setObjekte(technik);
     }
