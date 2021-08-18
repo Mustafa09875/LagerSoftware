@@ -95,7 +95,7 @@ public class LagerVerwaltungViewController implements Initializable {
     private ListView<String> LWTechnikAnpassen;
     
     private Technik technik;
-    private static ArrayList<Technik> technikarraylist;
+    
     @FXML
     private BorderPane BorderPaneTechnikSelect;
     private AnchorPane AnchorPaneLwAktualisierenView;
@@ -114,27 +114,12 @@ public class LagerVerwaltungViewController implements Initializable {
         
 
         
-         technikarraylist = new ArrayList <Technik>();
-         Boxen b = new Boxen("asd", 12, "AS", 12);
-         getTechnik().add(b);
-         getTechnik().add(b);
+         
         
         for(Technik t: App.getTechnik()){
             LWTechnikAnpassen.getItems().add(t.datenAusgeben());
         }
-        
-   }    
-
-    public static ArrayList<Technik> getTechnik() {
-        return technikarraylist;
-    }
-
-    public static void setTechnik(ArrayList<Technik> technik) {
-        LagerVerwaltungViewController.technikarraylist = technik;
-    }
-
-   
-    
+    } 
     
     
     @FXML
@@ -216,7 +201,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void LWTechnikAnspassenSelect(MouseEvent event) throws IOException {
                   int index = LWTechnikAnpassen.getSelectionModel().getSelectedIndex();
-        App.setSelectedTechnik(getTechnik().get(index));
+        App.setSelectedTechnik(App.getTechnik().get(index));
         System.out.println(App.getSelectedTechnik().getName());
  
                 
@@ -226,7 +211,7 @@ public class LagerVerwaltungViewController implements Initializable {
     @FXML
     private void BtnLWBearbeiten(ActionEvent event) throws IOException {
     AnchorPaneAktualisierungsView.setVisible(true);
-    
+    System.out.println(App.getTechnik().size());
     AnchorPane  pane = FXMLLoader.load(getClass().getResource("TechnikAktualisierenView.fxml"));
                     BorderPaneTechnikSelect.setCenter(pane);
       

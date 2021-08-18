@@ -163,32 +163,49 @@ public class TechnikAktualisierenViewController implements Initializable {
     private void BtnSaveBoxen(ActionEvent event) throws IOException {
         double sPreis = Double.parseDouble(TxtFBoxenMietpreis.getText());
         double sGewicht = Double.parseDouble(TxtFBoxenGewicht.getText());
-        App.setSelectedBox(new Boxen(TxtFBoxenName.getText(), sPreis, TxtFBoxenBeschreibung.getText(), sGewicht));
-        App.setRoot("LagerVerwaltungView");
+        
+        App.getSelectedBox().setName(TxtFBoxenName.getText());
+        App.getSelectedBox().setBeschreibung(TxtFBoxenBeschreibung.getText());
+        App.getSelectedBox().setGewicht(sGewicht);
+        App.getSelectedBox().setMietPreiproStunde(sPreis);
+        
     }
 
     @FXML
     private void BtnSaveKabel(ActionEvent event) throws IOException {
         double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
         double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
-        App.setSelectedKabel(new Kabel (TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge));
-        App.setRoot("LagerVerwaltungView");
+        
+        App.getSelectedKabel().setName(TxtFKabelName.getText());
+        App.getSelectedKabel().setBeschreibung(TxtFKabelBeschreibung.getText());
+        App.getSelectedKabel().setMietPreiproStunde(sPreis);
+        App.getSelectedKabel().setLaenge(sLaenge);
+        
     }
 
     @FXML
     private void BtnSaveTravers(ActionEvent event) throws IOException {
         double sLaenge = Double.parseDouble(TxtFTraversLaenge.getText());
         double sPreis = Double.parseDouble(TxtFTraversMietpreis.getText());
-        App.setSelectedTraverse(new Traversen(TxtFTraversName.getText(), sPreis, TxtFTraversBeschreibung.getText(),TxtFTraversArt.getText(), sLaenge ));
-        App.setRoot("LagerVerwaltungView");
+        
+        App.getSelectedTraverse().setArt(TxtFTraversArt.getText());
+        App.getSelectedTraverse().setLaenge(sLaenge);
+        App.getSelectedTraverse().setBeschreibung(TxtFTraversBeschreibung.getText());
+        App.getSelectedTraverse().setName(TxtFTraversName.getText());
+        App.getSelectedTraverse().setMietPreiproStunde(sPreis);
     }
 
     @FXML
     private void BtnSavePult(ActionEvent event) throws IOException {
         double sPreis = Double.parseDouble(TxtFPultMietpreis.getText());
         double sKanal = Double.parseDouble(TxtFPultKanele.getText());
-        App.setSelectedPult(new Pult(TxtFPultName.getText(), sPreis, TxtFPultBeschreibung.getText(), sKanal));
-        App.setRoot("LagerVerwaltungView");
+        
+        App.getSelectedPult().setName(TxtFPultName.getText());
+        App.getSelectedPult().setKanaele(sKanal);
+        App.getSelectedPult().setMietPreiproStunde(sPreis);
+        App.getSelectedPult().setBeschreibung(TxtFPultBeschreibung.getText());
+        
+        
        
     }
 
@@ -197,8 +214,10 @@ public class TechnikAktualisierenViewController implements Initializable {
         double sPreis = Double.parseDouble(TxtFPlatteMietpreis.getText());
        
     
-        App.setSelectedPlatte(new Buehnenplatte (TxtFPlatteName.getText(), sPreis, TxtFPlatteBeschreibung.getText(), TxtFPlatteMasse.getText()));
-        App.setRoot("LagerVerwaltungView");
+        App.getSelectedPlatte().setName(TxtFPlatteName.getText());
+        App.getSelectedPlatte().setMietPreiproStunde(sPreis);
+        App.getSelectedPlatte().setBeschreibung(TxtFPlatteBeschreibung.getText());
+        App.getSelectedPlatte().setMaBe(TxtFPlatteMasse.getText());
     }
 
     @FXML
