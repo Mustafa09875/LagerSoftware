@@ -128,12 +128,13 @@ public class TechnikAktualisierenViewController implements Initializable {
             TxtFMonitorBeschreibung.setText(App.getSelectedMonitor().getBeschreibung());
             TxtFMonitorMietpreis.setText(sPreis);
             TxtFMonitorZollangabe.setText(sZoll);
-            
-            
-            
-            
-        }
-        }
+        
+         } else if(App.getSelectedTechnik().getClass().equals(p1.getClass())){
+             App.setSelectedPult((Pult) App.getSelectedTechnik());
+             
+             String sPreis = String.valueOf(App.getSelectedPult().getMietPreiproStunde());
+         }
+    }
        
 
     @FXML
