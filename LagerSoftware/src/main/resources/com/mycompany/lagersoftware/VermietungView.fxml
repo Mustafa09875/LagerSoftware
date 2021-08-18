@@ -91,10 +91,10 @@
       <Label layoutX="225.0" layoutY="64.0" text="Techniker:" />
       <Label layoutX="437.0" layoutY="64.0" text="Technik" />
       <Label fx:id="lbSelectedKunde" layoutX="14.0" layoutY="281.0" text="Gewählte/r Kunde/in" />
-      <Button layoutX="10.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnAddKunde" text="Add" />
       <Label fx:id="lbSelectedTechniker" layoutX="229.0" layoutY="282.0" text="Gewählte/r Techniker/in" />
       <Button layoutX="225.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnAddTechniker" text="Add" />
       <Label fx:id="lbSelectedTechnik" layoutX="441.0" layoutY="282.0" text="Gewählte Technik" />
       <Button layoutX="437.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnAddTechnik" text="Add" />
+      <Button layoutX="556.0" layoutY="368.0" mnemonicParsing="false" onAction="#btnSaveVermietung" text="Fertig" />
    </children>
 </AnchorPane>
