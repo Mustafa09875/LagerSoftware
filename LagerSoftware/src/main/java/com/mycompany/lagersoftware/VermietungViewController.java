@@ -74,7 +74,6 @@ public class VermietungViewController implements Initializable {
         int index = lwKunde.getSelectionModel().getSelectedIndex();
         App.setSelectedKunde(App.getKunden().get(index));
         lbSelectedKunde.setText(App.getSelectedKunde().getNachname());
-        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),));
     }
 
     @FXML
@@ -96,6 +95,7 @@ public class VermietungViewController implements Initializable {
 
     @FXML
     private void btnSaveVermietung(ActionEvent event) {
+        //App.getVermietungen().add(new Vermietung(App.getSelectedKunde(),));
     }
     
 }
