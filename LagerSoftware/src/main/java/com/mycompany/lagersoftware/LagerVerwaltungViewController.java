@@ -171,6 +171,10 @@ public class LagerVerwaltungViewController implements Initializable {
 
     @FXML
     private void BtnSaveKabel(ActionEvent event) {
+        TabPane.setVisible(false);
+        AnchorPaneAktualisierungsView.setVisible(false);
+        BtnTechnikAnpassen.setVisible(true);
+        
         double sPreis = Double.parseDouble(TxtFKabelMietpreis.getText());
         double sLaenge = Double.parseDouble(TxtFKabelLaenge.getText());
         Kabel k1 = new Kabel(TxtFKabelName.getText(), sPreis, TxtFKabelBeschreibung.getText(), sLaenge);
