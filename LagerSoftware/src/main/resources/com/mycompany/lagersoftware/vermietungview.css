@@ -7,11 +7,6 @@
 }
 
 
-  .list-view .list-cell:even {
--fx-background-color: #D1D5F7;
--fx-text-fill: black;
- -fx-border-color: #E3E3E3;
-}
  .list-view .list-cell:hover {
 -fx-background-color: #D1D5F7;
     -fx-text-fill: white;

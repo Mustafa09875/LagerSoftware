@@ -111,7 +111,6 @@ public class LagerVerwaltungViewController implements Initializable {
      * @param url
      */
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("Funktion testen");
         TabPane.setVisible(true);
         AnchorPaneTechnikAnpassen.setVisible(true);
         BtnTechnikAnpassen.setVisible(false);

@@ -12,11 +12,14 @@ import java.util.Map.Entry;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
 
@@ -54,6 +57,10 @@ public class VermietungViewController implements Initializable {
     
     private ArrayList<Techniker> techniker;
     private HashMap<Technik,Integer>technik;
+    @FXML
+    private AnchorPane AnchorPaneVermietungAnzeigen;
+    @FXML
+    private AnchorPane AnchorPaneVermietungAnlegen;
 
     /**
      * Initializes the controller class.
@@ -76,17 +83,6 @@ public class VermietungViewController implements Initializable {
         technik = new HashMap();
     }    
 
-    @FXML
-    private void BtnTechnikanlegen(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnTechnikAnpassen(ActionEvent event) {
-    }
-
-    @FXML
-    private void BtnTechnikRegale(ActionEvent event) {
-    }
 
     @FXML
     private void btnSelectKunde(MouseEvent event) {
@@ -154,6 +150,18 @@ public class VermietungViewController implements Initializable {
         lbPreis.setText(kosten);
         
         System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten() * 0.2+"<---- Kosten/ Kunde/in ----> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
+    }
+
+    @FXML
+    private void BtnVermietunganlegen(ActionEvent event) {
+        AnchorPaneVermietungAnlegen.setVisible(true);
+        AnchorPaneVermietungAnzeigen.setVisible(false);
+    }
+
+    @FXML
+    private void BtnVermietunganzeigen(ActionEvent event) {
+      AnchorPaneVermietungAnzeigen.setVisible(true);
+      AnchorPaneVermietungAnlegen.setVisible(false);
     }
     
 }

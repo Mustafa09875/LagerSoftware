@@ -13,12 +13,12 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikerAktualisierenViewController">
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lagersoftware.TechnikerAktualisierenViewController">
     <stylesheets>
         <URL value="@/com/mycompany/lagersoftware/technikeraktualisierenview.css" />
     </stylesheets>
    <children>
-      <TabPane fx:id="TabPane" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/technikerspeichernview.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="TabPane" prefHeight="480.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@Icons/technikerspeichernview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab style="-fx-Cursor: Hand;" styleClass="technikeraktualisierenview.css" text="                           Techniker aktualisieren">
                <content>
@@ -42,7 +42,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="TxtFTechnikerStundensatz" layoutX="140.0" layoutY="161.0" prefHeight="27.0" prefWidth="210.0" promptText="Stundensatz" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikeraktualisierenview.css" />
-                        <Button layoutX="28.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnTechnikerSpeichern" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikeraktualisierenview.css" text="Aktualisieren">
+                        <Button layoutX="28.0" layoutY="380.0" mnemonicParsing="false" onAction="#BtnTechnikerSpeichern" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikeraktualisierenview.css" text="Aktualisieren">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -59,7 +59,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="TxtFTechnikerBeschreibung" layoutX="140.0" layoutY="209.0" prefHeight="27.0" prefWidth="210.0" promptText="Beschreibung" style="-fx-border-insets: 00; -fx-border-radius: 010; -fx-border-color: #515151; -fx-background-color: #E3E3E3; -fx-cursor: Text;" styleClass="text-input" stylesheets="@technikeraktualisierenview.css" />
-                        <Button layoutX="475.0" layoutY="332.0" mnemonicParsing="false" onAction="#BtnAbbrechenSpeichern" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikeraktualisierenview.css" text="Abbrechen">
+                        <Button layoutX="482.0" layoutY="380.0" mnemonicParsing="false" onAction="#BtnAbbrechenSpeichern" prefHeight="32.0" prefWidth="113.0" style="-fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@technikeraktualisierenview.css" text="Abbrechen">
                            <styleClass>
                               <String fx:value="btn" />
                               <String fx:value="btnsave" />
@@ -71,6 +71,6 @@
             </Tab>
          </tabs>
       </TabPane>
-      <BorderPane fx:id="BorderPaneAktualisieren" prefHeight="425.0" prefWidth="616.0" />
+      <BorderPane fx:id="BorderPaneAktualisieren" prefHeight="480.0" prefWidth="616.0" />
    </children>
 </AnchorPane>

@@ -67,7 +67,7 @@
         -fx-background-color:  #D1D5F7 ;
 
     -fx-pref-width : 300;
-    -fx-pref-height : 30;
+    -fx-pref-height : 39;
 }
 .tab-header-background{
     -fx-background-color: -fx-primary;
