@@ -142,13 +142,27 @@ public class VermietungViewController implements Initializable {
         for(Entry<Technik, Integer> entry :App.getVermietungen().get(App.getVermietungen().size()-1).getObjekte().entrySet()){
             System.out.println("Anzahl: " +entry.getValue());
             preis = preis + entry.getValue()* entry.getKey().getMietPreiproStunde();
+            //Abziehen der Anzahl
+            if(entry.getKey() instanceof Boxen){
+                App.getTechnikObjekte().replace(App.getTechnik().get(0),(int) (App.getTechnikObjekte().get(App.getTechnik().get(0)))-entry.getValue());
+            }else if(entry.getKey() instanceof Pult){
+                App.getTechnikObjekte().replace(App.getTechnik().get(1),(int) (App.getTechnikObjekte().get(App.getTechnik().get(1)))-entry.getValue());
+            }else if(entry.getKey() instanceof Buehnenplatte){
+                App.getTechnikObjekte().replace(App.getTechnik().get(2),(int) (App.getTechnikObjekte().get(App.getTechnik().get(2)))-entry.getValue());
+            }else if(entry.getKey() instanceof Kabel){
+                App.getTechnikObjekte().replace(App.getTechnik().get(3),(int) (App.getTechnikObjekte().get(App.getTechnik().get(3)))-entry.getValue());
+            }else if(entry.getKey() instanceof Traversen){
+                App.getTechnikObjekte().replace(App.getTechnik().get(4),(int) (App.getTechnikObjekte().get(App.getTechnik().get(4)))-entry.getValue());
+            }else if(entry.getKey() instanceof Monitor){
+                App.getTechnikObjekte().replace(App.getTechnik().get(5),(int) (App.getTechnikObjekte().get(App.getTechnik().get(5)))-entry.getValue());
+            }
         }
         //Preis wird Kosten uebergeben
         App.getVermietungen().get(App.getVermietungen().size()-1).setKosten(preis);
         
         String kosten = String.valueOf(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten());
         lbPreis.setText(kosten);
-        
+        System.out.println("Hash Map: " +App.getTechnikObjekte());
         System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten() * 0.2+"<---- Kosten/ Kunde/in ----> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
     }
 

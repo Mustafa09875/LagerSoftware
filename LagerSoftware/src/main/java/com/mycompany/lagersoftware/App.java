@@ -16,7 +16,7 @@ import javafx.stage.StageStyle;
  */
 public class App extends Application {
     
-    private static HashMap technikObjekte;
+    private static HashMap<Technik,Integer> technikObjekte;
     private static ArrayList<Kunde> kunden;
     private static ArrayList<Techniker> techniker;
     private static ArrayList<Vermietung> vermietungen;

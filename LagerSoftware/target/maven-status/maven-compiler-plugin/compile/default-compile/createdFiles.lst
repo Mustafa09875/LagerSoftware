@@ -10,6 +10,7 @@ com\mycompany\lagersoftware\Monitor.class
 com\mycompany\lagersoftware\Vermietung.class
 com\mycompany\lagersoftware\Boxen.class
 com\mycompany\lagersoftware\Techniker.class
+com\mycompany\lagersoftware\TechnikerAktualisierenViewController.class
 com\mycompany\lagersoftware\Traversen.class
 com\mycompany\lagersoftware\Buehnenplatte.class
 com\mycompany\lagersoftware\MainViewController.class
@@ -17,5 +18,6 @@ com\mycompany\lagersoftware\KundenSpeichernViewController.class
 com\mycompany\lagersoftware\Technik.class
 module-info.class
 com\mycompany\lagersoftware\LagerVerwaltungViewController.class
+com\mycompany\lagersoftware\KundenAktualisierenViewController.class
 com\mycompany\lagersoftware\App.class
 com\mycompany\lagersoftware\VermietungViewController.class
