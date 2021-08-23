@@ -50,9 +50,6 @@ public class TechnikerSpeichernViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         BorderPaneTechniker.setVisible(false);
         
-        for(Techniker t: App.getTechniker()){
-        LWTechnikAnpassen.getItems().add(t.datenAusgeben());
-      }
     }    
 
     @FXML
@@ -60,6 +57,11 @@ public class TechnikerSpeichernViewController implements Initializable {
         double sLohn = Double.parseDouble(TxtFTechnikerStundensatz.getText());
         Techniker tk1 = new Techniker(TxtFTechnikerVorname.getText(), TxtFTechnikerNachname.getText(), sLohn, TxtFTechnikerBeschreibung.getText());
         App.getTechniker().add(tk1);
+        
+        LWTechnikAnpassen.getItems().clear();
+        for(Techniker t: App.getTechniker()){
+        LWTechnikAnpassen.getItems().add(t.datenAusgeben());
+      }
     }
 
     @FXML

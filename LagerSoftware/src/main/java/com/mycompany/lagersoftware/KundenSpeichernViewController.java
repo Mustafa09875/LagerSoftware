@@ -54,7 +54,7 @@ public class KundenSpeichernViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         BorderPaneKundeaktualisieren.setVisible(false);
-        
+        LWKundenAnpassen.getItems().clear();
         for(Kunde k: App.getKunden()){
             LWKundenAnpassen.getItems().add(k.datenAusgeben());
         }
@@ -69,12 +69,20 @@ public class KundenSpeichernViewController implements Initializable {
     private void BtnPrivatKundeSpeichern(ActionEvent event) {
         PrivateKundeModel pk1 = new PrivateKundeModel(TxtFPrivatKundeVorname.getText(), TxtFPrivatKundeNachname.getText(), TxtFPrivatKundeAdresse.getText());
         App.getKunden().add(pk1);
+        LWKundenAnpassen.getItems().clear();
+        for(Kunde k: App.getKunden()){
+            LWKundenAnpassen.getItems().add(k.datenAusgeben());
+        }
     }
 
     @FXML
     private void BtnGeschaeftsKundeSpeichern(ActionEvent event) {
         GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel(TxtFGeschaeftsKundeVorname.getText(), TxtFGeschaeftsKundeNachname.getText(), TxtFGeschaeftsKundeAdresse.getText(), TxtFGeschaeftsKundeFirma.getText());
         App.getKunden().add(gk1);
+        LWKundenAnpassen.getItems().clear();
+        for(Kunde k: App.getKunden()){
+            LWKundenAnpassen.getItems().add(k.datenAusgeben());
+        }
     }
 
 
