@@ -44,11 +44,26 @@ public class TechnikerAktualisierenViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         BorderPaneAktualisieren.setVisible(false);
+        TxtFTechnikerVorname.setText(App.getSelectedTechniker().getVorname());
+        TxtFTechnikerNachname.setText(App.getSelectedTechniker().getNachname());
+        String sSatz = String.valueOf(App.getSelectedTechniker().getStundensatz());
+        TxtFTechnikerStundensatz.setText(sSatz);
+        TxtFTechnikerBeschreibung.setText(App.getSelectedTechniker().getBeschreibung());
     }    
 
     @FXML
     private void BtnTechnikerSpeichern(ActionEvent event) throws IOException {
-              BorderPaneAktualisieren.setVisible(true);
+         
+        
+        double dSatz = Double.parseDouble(TxtFTechnikerStundensatz.getText());
+        App.getSelectedTechniker().setBeschreibung(TxtFTechnikerBeschreibung.getText());
+        App.getSelectedTechniker().setVorname(TxtFTechnikerVorname.getText());
+        App.getSelectedTechniker().setNachname(TxtFTechnikerNachname.getText());
+        App.getSelectedTechniker().setStundensatz(dSatz);
+         
+         
+         
+        BorderPaneAktualisieren.setVisible(true);
          AnchorPane pane = FXMLLoader.load(getClass().getResource("TechnikerSpeichernView.fxml"));
         BorderPaneAktualisieren.setCenter(pane);
     }

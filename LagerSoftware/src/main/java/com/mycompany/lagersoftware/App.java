@@ -20,7 +20,8 @@ public class App extends Application {
     private static ArrayList<Kunde> kunden;
     private static ArrayList<Techniker> techniker;
     private static ArrayList<Vermietung> vermietungen;
-    
+    private static PrivateKundeModel selectedPK;
+    private static GeschaeftsKundeModel selectedGK;
     private static Kunde selectedKunde;
     private static Techniker selectedTechniker;
     private static Technik selectedTechnik;
@@ -30,6 +31,22 @@ public class App extends Application {
     private static Monitor selectedMonitor;
     private static Pult selectedPult;
     private static Traversen selectedTraverse;
+
+    public static PrivateKundeModel getSelectedPK() {
+        return selectedPK;
+    }
+
+    public static void setSelectedPK(PrivateKundeModel selectedPK) {
+        App.selectedPK = selectedPK;
+    }
+
+    public static GeschaeftsKundeModel getSelectedGK() {
+        return selectedGK;
+    }
+
+    public static void setSelectedGK(GeschaeftsKundeModel selectedGK) {
+        App.selectedGK = selectedGK;
+    }
 
     public static Kunde getSelectedKunde() {
         return selectedKunde;

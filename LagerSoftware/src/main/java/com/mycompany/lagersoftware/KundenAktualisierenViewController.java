@@ -49,12 +49,31 @@ public class KundenAktualisierenViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         BorderPaneZurück.setVisible(false);
-        // TODO
+        PrivateKundeModel pk1 = new PrivateKundeModel("a", "a", "a");
+        GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel("a", "a", "a", "a");
+        
+        if(App.getSelectedKunde().getClass().equals(pk1.getClass())){
+            App.setSelectedPK((PrivateKundeModel) App.getSelectedKunde());
+            TxtFPrivatKundeAdresse.setText(App.getSelectedPK().getAdresse());
+            TxtFPrivatKundeNachname.setText(App.getSelectedPK().getNachname());
+            TxtFPrivatKundeVorname.setText(App.getSelectedPK().getVorname());
+        } else if(App.getSelectedKunde().getClass().equals(gk1.getClass())){
+            App.setSelectedGK((GeschaeftsKundeModel) App.getSelectedKunde());
+            TxtFGeschaeftsKundeAdresse.setText(App.getSelectedGK().getAdresse());
+            TxtFGeschaeftsKundeNachname.setText(App.getSelectedGK().getNachname());
+            TxtFGeschaeftsKundeVorname.setText(App.getSelectedGK().getVorname());
+            TxtFGeschaeftsKundeFirma.setText(App.getSelectedGK().getFirma());
+        }
     }    
 
     @FXML
     private void BtnPrivatKundeSpeichern(ActionEvent event) throws IOException {
-           BorderPaneZurück.setVisible(true);
+        App.getSelectedPK().setNachname(TxtFPrivatKundeNachname.getText());
+        App.getSelectedPK().setVorname(TxtFPrivatKundeVorname.getText());
+        App.getSelectedPK().setAdresse(TxtFPrivatKundeAdresse.getText());
+        
+        
+        BorderPaneZurück.setVisible(true);
          AnchorPane pane = FXMLLoader.load(getClass().getResource("KundenSpeichernView.fxml"));
         BorderPaneZurück.setCenter(pane); 
     }
@@ -68,7 +87,14 @@ public class KundenAktualisierenViewController implements Initializable {
 
     @FXML
     private void BtnGeschaeftsKundeSpeichern(ActionEvent event) throws IOException {
-           BorderPaneZurück.setVisible(true);
+        App.getSelectedGK().setAdresse(TxtFGeschaeftsKundeAdresse.getText());
+        App.getSelectedGK().setNachname(TxtFGeschaeftsKundeNachname.getText());
+        App.getSelectedGK().setVorname(TxtFGeschaeftsKundeVorname.getText());
+        App.getSelectedGK().setFirma(TxtFGeschaeftsKundeFirma.getText());
+        
+        
+        
+        BorderPaneZurück.setVisible(true);
          AnchorPane pane = FXMLLoader.load(getClass().getResource("KundenSpeichernView.fxml"));
         BorderPaneZurück.setCenter(pane); 
         
