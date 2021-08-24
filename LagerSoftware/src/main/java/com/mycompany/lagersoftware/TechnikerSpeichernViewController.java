@@ -49,6 +49,9 @@ public class TechnikerSpeichernViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         BorderPaneTechniker.setVisible(false);
+         for(Techniker t: App.getTechniker()){
+            LWTechnikAnpassen.getItems().add(t.datenAusgeben());
+      }
         
     }    
 
