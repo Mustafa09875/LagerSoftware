@@ -151,7 +151,7 @@
       </AnchorPane>
       <AnchorPane fx:id="AnchorPaneVermietungAnzeigen" layoutY="49.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="613.0" visible="false">
          <children>
-            <ListView prefHeight="431.0" prefWidth="613.0" stylesheets="@vermietungview.css">
+            <ListView fx:id="LwVermietung" prefHeight="431.0" prefWidth="613.0" stylesheets="@vermietungview.css">
                <styleClass>
                   <String fx:value="list-cell" />
                   <String fx:value="list-view" />
