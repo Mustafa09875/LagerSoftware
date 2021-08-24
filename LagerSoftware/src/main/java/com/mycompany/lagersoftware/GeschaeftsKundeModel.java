@@ -30,6 +30,11 @@ public class GeschaeftsKundeModel extends Kunde{
     public String datenAusgeben() {
         return "Geschäftskunde - " + this.getVorname() + " - " + this.getNachname() + " - " + this.getAdresse() + " - " + this.getFirma();
     }
+
+    @Override
+    public String klasseAusgeben() {
+        return "Geschäftlich ";
+    }
     
     
 }

@@ -21,5 +21,10 @@ public class PrivateKundeModel extends Kunde{
     public String datenAusgeben() {
        return "Privatkunde - " + this.getVorname() + " - " + this.getNachname() + " - " + this.getAdresse();
     }
+
+    @Override
+    public String klasseAusgeben() {
+        return "Privat ";
+    }
     
 }

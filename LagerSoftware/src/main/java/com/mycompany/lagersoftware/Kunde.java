@@ -28,6 +28,7 @@ public abstract class Kunde extends Person{
     }
     
     public abstract String datenAusgeben();
+    public abstract String klasseAusgeben();
         
     
 }

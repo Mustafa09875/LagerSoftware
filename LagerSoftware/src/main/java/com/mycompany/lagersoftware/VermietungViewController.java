@@ -70,22 +70,24 @@ public class VermietungViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        lwKunde.getItems().clear();
         for(Kunde k : App.getKunden()){
             lwKunde.getItems().add(k.getVorname()+" "+k.getNachname());
         }
-        
+        lwTechniker.getItems().clear();
         for(Techniker t : App.getTechniker()){
             lwTechniker.getItems().add(t.getVorname()+" "+t.getNachname());
         }
-        
+        lwTechnik.getItems().clear();
         for(Technik t : App.getTechnik()){
             lwTechnik.getItems().add(t.getName()+" "+t.getBeschreibung());
         }
         techniker = new ArrayList<Techniker>();
         technik = new HashMap();
         
+        LwVermietung.getItems().clear();
         for(Vermietung v : App.getVermietungen() ){
-      LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().getClass().getSimpleName() +"   Techniker:   "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten:   "+ v.getKosten() +"   Startdatum:"+ v.getStart() +"   Enddatum"+     v.getEnde()); 
+             LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().klasseAusgeben() +"   Techniker: "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten "+ v.getKosten() +"€   Startdatum: "+ v.getStart() +"   Enddatum: "+ v.getEnde()); 
       }
     }    
 
@@ -173,10 +175,10 @@ public class VermietungViewController implements Initializable {
         
          AnchorPaneVermietungAnzeigen.setVisible(true);
       AnchorPaneVermietungAnlegen.setVisible(false);
-       LwVermietung.getItems().clear();
+      LwVermietung.getItems().clear();
         for(Vermietung v : App.getVermietungen() ){
-      LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().getClass().getSimpleName() +"   Techniker:   "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten:   "+ v.getKosten() +"   Startdatum:"+ v.getStart() +"   Enddatum"+     v.getEnde()); 
-      }  
+             LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().klasseAusgeben() +"   Techniker: "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten "+ v.getKosten() +"€   Startdatum: "+ v.getStart() +"   Enddatum: "+ v.getEnde()); 
+      }
       
     }
 
@@ -191,9 +193,9 @@ public class VermietungViewController implements Initializable {
       AnchorPaneVermietungAnzeigen.setVisible(true);
       AnchorPaneVermietungAnlegen.setVisible(false);
       
-      LwVermietung.getItems().clear();
+            LwVermietung.getItems().clear();
         for(Vermietung v : App.getVermietungen() ){
-      LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().getClass().getSimpleName() +"   Techniker:   "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten:   "+ v.getKosten() +"   Startdatum:"+ v.getStart() +"   Enddatum"+     v.getEnde()); 
+             LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().klasseAusgeben() +"   Techniker: "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten "+ v.getKosten() +"€   Startdatum: "+ v.getStart() +"   Enddatum: "+ v.getEnde()); 
       }
       
     }
