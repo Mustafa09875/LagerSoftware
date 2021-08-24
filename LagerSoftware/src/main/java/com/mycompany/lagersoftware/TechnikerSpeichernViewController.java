@@ -87,6 +87,7 @@ public class TechnikerSpeichernViewController implements Initializable {
         
         App.getTechniker().remove(0);
         
+        LWTechnikAnpassen.getItems().clear();
         for(Techniker t: App.getTechniker()){
             LWTechnikAnpassen.getItems().add(t.datenAusgeben());
       }

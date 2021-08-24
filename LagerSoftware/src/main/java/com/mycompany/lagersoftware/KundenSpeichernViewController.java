@@ -96,6 +96,11 @@ public class KundenSpeichernViewController implements Initializable {
     private void BtnLwKundenLöschen(ActionEvent event) {
         int index = LWKundenAnpassen.getSelectionModel().getSelectedIndex();
         App.getKunden().remove(index);
+        
+        LWKundenAnpassen.getItems().clear();
+        for(Kunde k: App.getKunden()){
+            LWKundenAnpassen.getItems().add(k.datenAusgeben());
+        }
     }
 
     @FXML
