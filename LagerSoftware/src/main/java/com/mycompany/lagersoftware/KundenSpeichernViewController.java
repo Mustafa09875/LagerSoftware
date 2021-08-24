@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
@@ -47,12 +48,19 @@ public class KundenSpeichernViewController implements Initializable {
     private ListView<String> LWKundenAnpassen;
     @FXML
     private BorderPane BorderPaneKundeaktualisieren;
+    @FXML
+    private Label LabelSavePKunde;
+    @FXML
+    private Label LabelSaveGKunde;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        LabelSaveGKunde.setVisible(false);
+        LabelSavePKunde.setVisible(false);
+        
         BorderPaneKundeaktualisieren.setVisible(false);
         LWKundenAnpassen.getItems().clear();
         for(Kunde k: App.getKunden()){
@@ -69,6 +77,8 @@ public class KundenSpeichernViewController implements Initializable {
     private void BtnPrivatKundeSpeichern(ActionEvent event) {
         PrivateKundeModel pk1 = new PrivateKundeModel(TxtFPrivatKundeVorname.getText(), TxtFPrivatKundeNachname.getText(), TxtFPrivatKundeAdresse.getText());
         App.getKunden().add(pk1);
+                LabelSavePKunde.setVisible(true);
+
         LWKundenAnpassen.getItems().clear();
         for(Kunde k: App.getKunden()){
             LWKundenAnpassen.getItems().add(k.datenAusgeben());
@@ -79,6 +89,7 @@ public class KundenSpeichernViewController implements Initializable {
     private void BtnGeschaeftsKundeSpeichern(ActionEvent event) {
         GeschaeftsKundeModel gk1 = new GeschaeftsKundeModel(TxtFGeschaeftsKundeVorname.getText(), TxtFGeschaeftsKundeNachname.getText(), TxtFGeschaeftsKundeAdresse.getText(), TxtFGeschaeftsKundeFirma.getText());
         App.getKunden().add(gk1);
+        LabelSaveGKunde.setVisible(true);
         LWKundenAnpassen.getItems().clear();
         for(Kunde k: App.getKunden()){
             LWKundenAnpassen.getItems().add(k.datenAusgeben());
@@ -88,12 +99,16 @@ public class KundenSpeichernViewController implements Initializable {
 
     @FXML
     private void LWTechnikerSelect(MouseEvent event) {
+         LabelSaveGKunde.setVisible(false);
+        LabelSavePKunde.setVisible(false);
         int index = LWKundenAnpassen.getSelectionModel().getSelectedIndex();
         App.setSelectedKunde(App.getKunden().get(index));
     }
 
     @FXML
     private void BtnLwKundenLöschen(ActionEvent event) {
+         LabelSaveGKunde.setVisible(false);
+        LabelSavePKunde.setVisible(false);
         int index = LWKundenAnpassen.getSelectionModel().getSelectedIndex();
         App.getKunden().remove(index);
         
@@ -105,6 +120,8 @@ public class KundenSpeichernViewController implements Initializable {
 
     @FXML
     private void BtnLWKundenBearbeiten(ActionEvent event) throws IOException {
+         LabelSaveGKunde.setVisible(false);
+        LabelSavePKunde.setVisible(false);
       BorderPaneKundeaktualisieren.setVisible(true);
          AnchorPane pane = FXMLLoader.load(getClass().getResource("KundenAktualisierenView.fxml"));
         BorderPaneKundeaktualisieren.setCenter(pane);        

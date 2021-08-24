@@ -63,6 +63,8 @@ public class VermietungViewController implements Initializable {
     private AnchorPane AnchorPaneVermietungAnlegen;
     @FXML
     private ListView<String> LwVermietung;
+    @FXML
+    private Label LabelVSpeichern;
 
     /**
      * Initializes the controller class.
@@ -179,6 +181,8 @@ public class VermietungViewController implements Initializable {
         for(Vermietung v : App.getVermietungen() ){
              LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().klasseAusgeben() +"   Techniker: "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten "+ v.getKosten() +"€   Startdatum: "+ v.getStart() +"   Enddatum: "+ v.getEnde()); 
       }
+        
+        LabelVSpeichern.setVisible(false);
       
     }
 
