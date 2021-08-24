@@ -170,6 +170,14 @@ public class VermietungViewController implements Initializable {
         lbPreis.setText(kosten);
         System.out.println("Hash Map: " +App.getTechnikObjekte());
         System.out.println(App.getVermietungen().get(App.getVermietungen().size()-1).getKosten() * 0.2+"<---- Kosten/ Kunde/in ----> "+ App.getVermietungen().get(App.getVermietungen().size()-1).getKunde());
+        
+         AnchorPaneVermietungAnzeigen.setVisible(true);
+      AnchorPaneVermietungAnlegen.setVisible(false);
+       LwVermietung.getItems().clear();
+        for(Vermietung v : App.getVermietungen() ){
+      LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().getClass().getSimpleName() +"   Techniker:   "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten:   "+ v.getKosten() +"   Startdatum:"+ v.getStart() +"   Enddatum"+     v.getEnde()); 
+      }  
+      
     }
 
     @FXML
@@ -183,6 +191,10 @@ public class VermietungViewController implements Initializable {
       AnchorPaneVermietungAnzeigen.setVisible(true);
       AnchorPaneVermietungAnlegen.setVisible(false);
       
+      LwVermietung.getItems().clear();
+        for(Vermietung v : App.getVermietungen() ){
+      LwVermietung.getItems().add("Kunde:  " + v.getKunde().getVorname() +" "+ v.getKunde().getNachname() +" "+ v.getKunde().getClass().getSimpleName() +"   Techniker:   "+ v.getTechniker().get(0).getVorname()  +" "+ v.getTechniker().get(0).getNachname() +" "+ v.getTechniker().get(0).getClass().getSimpleName() +"   Kosten:   "+ v.getKosten() +"   Startdatum:"+ v.getStart() +"   Enddatum"+     v.getEnde()); 
+      }
       
     }
     
