@@ -18,7 +18,7 @@
         <URL value="@technikaktualisierenview.css" />
     </stylesheets>
    <children>
-      <TabPane fx:id="TabPane" layoutY="2.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@technikaktualisierenview.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="TabPane" layoutY="-4.0" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" stylesheets="@technikaktualisierenview.css" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab style="-fx-Cursor: Hand;" text="Box">
                <content>
@@ -286,7 +286,7 @@
             </Tab>
          </tabs>
       </TabPane>
-      <AnchorPane fx:id="AncPaneAktuEntfernen" prefHeight="425.0" prefWidth="616.0" visible="false">
+      <AnchorPane fx:id="AncPaneAktuEntfernen" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #E3E3E3;" visible="false">
          <children>
             <BorderPane fx:id="BorderPaneNeueView" prefHeight="425.0" prefWidth="616.0" />
          </children>
